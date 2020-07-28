@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Chart Name="Chart1">
+        <ChartCategoryHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Group Name="Chart1_CategoryGroup">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!nromes.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!nromes.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart1_CategoryGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!mes.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!mes.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!mes.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+              <Label>=Fields!nromes.Value</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartCategoryHierarchy>
+        <ChartSeriesHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Label>FACTOTAL</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartSeriesHierarchy>
+        <ChartData>
+          <ChartSeriesCollection>
+            <ChartSeries Name="FACTOTAL">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!FACTOTAL.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Type>Auto</Type>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Line</Type>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+          </ChartSeriesCollection>
+        </ChartData>
+        <ChartAreas>
+          <ChartArea Name="Default">
+            <ChartCategoryAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Meses</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>True</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Enabled>True</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Título del eje</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+            </ChartCategoryAxes>
+            <ChartValueAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <Format>'$' #,0.00</Format>
+                  <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Montos</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Enabled>True</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Enabled>True</Enabled>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <LogBase>2</LogBase>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Título del eje</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+            </ChartValueAxes>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </ChartArea>
+        </ChartAreas>
+        <ChartTitles>
+          <ChartTitle Name="Default">
+            <Caption>Ingresos Anuales</Caption>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontWeight>Bold</FontWeight>
+              <TextAlign>General</TextAlign>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </ChartTitle>
+        </ChartTitles>
+        <Palette>BrightPastel</Palette>
+        <ChartBorderSkin>
+          <ChartBorderSkinType>Raised</ChartBorderSkinType>
+          <Style>
+            <BackgroundColor>Gray</BackgroundColor>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <Color>White</Color>
+          </Style>
+        </ChartBorderSkin>
+        <ChartNoDataMessage Name="NoDataMessage">
+          <Caption>Sin datos disponibles</Caption>
+          <Style>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <TextAlign>General</TextAlign>
+            <VerticalAlign>Top</VerticalAlign>
+          </Style>
+        </ChartNoDataMessage>
+        <DataSetName>dsGrafico1</DataSetName>
+        <Top>0.03175cm</Top>
+        <Left>0.85196cm</Left>
+        <Height>10.57361cm</Height>
+        <Width>15.09941cm</Width>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <BackgroundGradientType>None</BackgroundGradientType>
+        </Style>
+      </Chart>
+    </ReportItems>
+    <Height>4.33339in</Height>
+    <Style />
+  </Body>
+  <Width>6.58693in</Width>
+  <Page>
+    <PageHeader>
+      <Height>1.41703cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>GRÁFICO DE INGRESOS MENSUALES POR EMPRESA Y PTO. VTA.</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.04382cm</Top>
+          <Height>0.6cm</Height>
+          <Width>16.7308cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <VerticalAlign>Middle</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>EMPRESA: </Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Top>0.7366cm</Top>
+          <Left>0.09681cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.1063cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Fields!RAZONSOCIAL1.Value</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Top>0.7366cm</Top>
+          <Left>2.3795cm</Left>
+          <Height>0.6cm</Height>
+          <Width>8.94607cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox10">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Pto. Vta.:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Top>0.7366cm</Top>
+          <Left>11.58179cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.46475cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <VerticalAlign>Middle</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox12">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Fields!SUCURSAL.Value</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Top>0.7366cm</Top>
+          <Left>14.18765cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.54315cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <VerticalAlign>Middle</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DGestionDTGeneral">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>b4cd90c4-a9f2-406f-8114-fc902c94b288</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dsGrafico1">
+      <Query>
+        <DataSourceName>DGestionDTGeneral</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="RAZONSOCIAL">
+          <DataField>RAZONSOCIAL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Operaciones">
+          <DataField>Operaciones</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="mes">
+          <DataField>mes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nromes">
+          <DataField>nromes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="año">
+          <DataField>año</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FACTOTAL">
+          <DataField>FACTOTAL</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RAZONSOCIAL1">
+          <DataField>RAZONSOCIAL1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SUCURSAL">
+          <DataField>SUCURSAL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DGestionDTGeneral</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\DGestionDTGeneral.xsd</rd:SchemaPath>
+        <rd:TableName>rpt_Grafico_1</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>rpt_Grafico_1TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>64199155-e96a-4e13-ae6f-62ffdcfc9631</rd:ReportID>
+</Report>

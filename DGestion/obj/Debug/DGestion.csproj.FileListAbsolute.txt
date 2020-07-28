@@ -1,0 +1,246 @@
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\bin\Debug\DGestion.exe.config
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\bin\Debug\DGestion.exe
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\bin\Debug\DGestion.pdb
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\Interop.MSDataReportLib.dll
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\Interop.MSDATASRC.dll
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.csproj.ResolveComReference.cache
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmAdminConfig.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmArticulo.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmArticuloEstadoStock.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmArtPrecioVenta.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmChangeLog.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmCliente.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmEspecialidad.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmEstadoCivil.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmFacturacion.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmFamiliaArticulo.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmFormaPago.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmImpuestos.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmListaPrecioCompra.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmListaPrecioVenta.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmLogIn.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmMarcaArticulo.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmNotaPedido.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmPersonal.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmProveedCompra.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmProveedores.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmRemito.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmRubroArticulo.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmSaldo.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmSoporteTecnico.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmSubTipoPago.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoArticulo.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoFactura.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoIva.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoPago.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoPersonal.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoProducto.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoRemito.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmUsuarioGrupo.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmVendedor.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmVersion.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmVisorSuceso.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmPrincipal.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.Properties.Resources.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.Reportes.frmRPTarticulo.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.csproj.GenerateResource.Cache
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\RdlCompile.cache
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\RdlCompile.compiled
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.exe
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.pdb
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmRecibo.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmNotaDeCredito.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.frmNotaDeDebito.resources
+C:\Users\Marcelo\documents\visual studio 2013\Projects\DGestion\DGestion\obj\Debug\DGestion.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\bin\Debug\DGestion.exe.config
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\Interop.MSDATASRC.dll
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.csproj.ResolveComReference.cache
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.exe
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.pdb
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\bin\Debug\DGestion.exe
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\bin\Debug\DGestion.pdb
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmAdminConfig.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmArticulo.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmArticuloEstadoStock.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmArtPrecioVenta.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmChangeLog.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmCliente.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmEmpresa.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmEspecialidad.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmEstadoCivil.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmFacturacion.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmFamiliaArticulo.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmFormaPago.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmImpuestos.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmListaPrecioCompra.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmListaPrecioVenta.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmLogIn.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmMarcaArticulo.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmMonitorRed.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmMultiCentro.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmNotaDeCredito.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmNotaDeDebito.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmNotaPedido.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmPersonal.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmProveedCompra.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmProveedores.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmRecibo.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmRemito.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmRubroArticulo.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmSaldo.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmSoporteTecnico.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmSubTipoPago.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmTipoIBArticulo.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmTipoFactura.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmTipoIva.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmTipoPago.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmTipoPersonal.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmTipoIVAProducto.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmTipoRemito.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmUsuarioGrupo.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmVendedor.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmVersion.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmVisorSuceso.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.frmPrincipal.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.Properties.Resources.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.Reportes.frmRPTarticulo.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.Reportes.frmRPTFacturacion.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.Reportes.frmRPTNotaPedido.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.Reportes.frmRPTRecibo.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.Reportes.frmRPTRemito.resources
+C:\Users\Marcelo\Documents\Visual Studio 2015\Projects\DGestion\obj\Debug\DGestion.csproj.GenerateResource.Cache
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\bin\Debug\DGestion.exe.config
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\bin\Debug\DGestion.exe
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\bin\Debug\DGestion.pdb
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\Interop.MSDATASRC.dll
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.csproj.ResolveComReference.cache
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmAdminConfig.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmArticulo.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmArticuloEstadoStock.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmArtPrecioVenta.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmChangeLog.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmCliente.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmEmpresa.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmEspecialidad.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmEstadoCivil.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmFacturacion.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmFamiliaArticulo.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmFormaPago.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmImpuestos.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmListaPrecioCompra.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmListaPrecioVenta.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmLogIn.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmMarcaArticulo.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmMonitorRed.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmMultiCentro.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmNotaDeCredito.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmNotaDeDebito.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmNotaPedido.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmPermisos.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmPersonal.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmProveedCompra.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmProveedores.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmRecibo.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmRemito.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmRubroArticulo.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmSaldo.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmSoporteTecnico.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmSubTipoPago.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoIBArticulo.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoFactura.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoIva.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoPago.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoPersonal.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoIVAProducto.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTipoRemito.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmUsuarioGrupo.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmVendedor.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmVersion.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmVisorSuceso.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmPrincipal.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.Properties.Resources.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.Reportes.frmRPTarticulo.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.Reportes.frmRPTFacturacion.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.Reportes.frmRPTNotaPedido.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.Reportes.frmRPTRecibo.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.Reportes.frmRPTRemito.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.csproj.GenerateResource.Cache
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\RdlCompile.cache
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\RdlCompile.compiled
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.exe
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.pdb
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.Reportes.frmRTFactuConsulta.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.Reportes.frmRPTListaPrecio.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.frmTesoreria.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.Reportes.frmRPTNotaCredito.resources
+C:\Users\marce\Documents\Visual Studio 2015\Projects\DGestion\DGestion\obj\Debug\DGestion.csprojResolveAssemblyReference.cache
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\bin\Debug\DGestion.exe.config
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\Interop.MSDATASRC.dll
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.csproj.ResolveComReference.cache
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.exe
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.pdb
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\bin\Debug\DGestion.exe
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\bin\Debug\DGestion.pdb
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.csprojResolveAssemblyReference.cache
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmAdminConfig.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmArticulo.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmArticuloEstadoStock.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmArtPrecioVenta.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmChangeLog.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmCliente.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmEmpresa.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmEspecialidad.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmEstadoCivil.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmFacturacion.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmFamiliaArticulo.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmFormaPago.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmImpuestos.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmListaPrecioCompra.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmListaPrecioVenta.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmLogIn.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmMarcaArticulo.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmMonitorRed.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmMultiCentro.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmNotaDeCredito.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmNotaDeDebito.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmNotaPedido.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmPermisos.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmPersonal.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmProveedCompra.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmProveedores.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmRecibo.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmRemito.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmRubroArticulo.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmSaldo.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmSoporteTecnico.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmSubTipoPago.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmTesoreria.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmTipoIBArticulo.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmTipoFactura.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmTipoIva.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmTipoPago.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmTipoPersonal.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmTipoIVAProducto.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmTipoRemito.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmUsuarioGrupo.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmVendedor.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmVersion.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmVisorSuceso.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.frmPrincipal.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.Properties.Resources.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.Reportes.frmRPTarticulo.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.Reportes.frmRPTFacturacion.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.Reportes.frmRPTListaPrecio.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.Reportes.frmRPTNotaCredito.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.Reportes.frmRPTNotaPedido.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.Reportes.frmRPTRecibo.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.Reportes.frmRPTRemito.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.Reportes.frmRTFactuConsulta.resources
+C:\Users\ALBERTO\Desktop\USO\DGESTION\DGestion FUENTE\DGestion\obj\Debug\DGestion.csproj.GenerateResource.Cache

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="DGestion.exe" version="1.0.0.3" publicKeyToken="8c729303a96e367c" language="es-AR" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Case.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="DGestion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="DGestion.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- Opciones del manifiesto de Control de cuentas de usuario
+             Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
+             nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            La especificación del nodo requestedExecutionLevel deshabilitará la virtualización de archivos y del Registro.
+            Si desea usar la virtualización de archivos y del Registro para la compatibilidad 
+            con versiones anteriores, elimine el nodo requestedExecutionLevel.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.ReportViewer.Common" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.ReportViewer.DataVisualization" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.ReportViewer.ProcessingObjectModel" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.ReportViewer.WinForms" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.SqlServer.Types" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DGestion.exe" size="4752384">
+      <assemblyIdentity name="DGestion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>rKwjuEeW+kj9RQoBvL7huVnevMA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.ReportViewer.WinForms.resources.dll" size="84920">
+      <assemblyIdentity name="Microsoft.ReportViewer.WinForms.resources" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>NCBCoXAHOxfSVbZEwmvw6kkpQmI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.SqlServer.Types.resources.dll" size="48752">
+      <assemblyIdentity name="Microsoft.SqlServer.Types.resources" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>RgXgVDPf/Ov/60g9RnLRq1ACGy0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Case.ico" size="34494">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>y9upUGkgDCMaRgMO0wIyHa+AuF0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DGestion.exe.config" size="1494">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OhlT1oh/0XVKmCOa5gCMjrdOSpM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Lista de todas las versiones de Windows con las que esta aplicación está diseñada para funcionar. 
+      Windows seleccionará automáticamente el entorno de mayor compatibilidad.-->
+      <!-- Si la aplicación está diseñada para funcionar con Windows Vista, quite los comentarios del siguiente nodo supportedOS-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- Si la aplicación está diseñada para funcionar con Windows 7, quite los comentarios del siguiente nodo supportedOS-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- Si la aplicación está diseñada para funcionar con Windows 8, quite los comentarios del siguiente nodo supportedOS-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=MARCELO\Marcelo" issuerKeyHash="199a5ddd4c062ec4dcf2a0ff89c970b4b9edd9ea" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>nF4kyvBJsBcVlW9cb04VUkdr5Q0=</DigestValue></Reference></SignedInfo><SignatureValue>aP3I/ys10Aj7kZlHHFqtt2iZaNoRAqkM/sXYP2kcmk33Ek47RGl7d2rRT1nxpyg5mM+wwuvaaeuaZjWce4QBUdrvZO64RQUNt8QBA82yjlyRSDkT07IG+rZcn8lgs3hbl+APdipXHK2zoc8kU3pcErQispW3FyS5K7MQbJxiln8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>4n8AVPe2AHVJESLKcQqEA35Rizj1i6l5ztvrJMR7PBAsV5fSuD/8s7HUFXp5CyHTxM2UfLusd8hQXhLulPk8UdVmm6+dJL+lvnDq/ODV/A9H6pG1TqivRqszWaTH7QGBm3hLKUl6exbRBD1Bx2eqJJPVyv1qG8zKaDgMYyyb9SU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="0de56b4752154e6f5c6f951517b049f0ca245e9c" Description="" Url=""><as:assemblyIdentity name="DGestion.exe" version="1.0.0.3" publicKeyToken="8c729303a96e367c" language="es-AR" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MARCELO\Marcelo</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>qoBj+erf0R3f1DJ6sMEqvobGyNo=</DigestValue></Reference></SignedInfo><SignatureValue>OPy70noFLoLQZDJOJ2j8FpW3nat4ceJ+0MVhx2BGRGc7EOUIPNNmmQZEe6T1kVRxbTQ1wGmGx/KOhpb5lmQdyku3w004aPgK0uZdkiynXq/pTN9doLmPri+OGkE4HR9mTaVxPO9OlEozkpHDVKLjGx77rT3R7cqGVHBTl7KHvPw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4n8AVPe2AHVJESLKcQqEA35Rizj1i6l5ztvrJMR7PBAsV5fSuD/8s7HUFXp5CyHTxM2UfLusd8hQXhLulPk8UdVmm6+dJL+lvnDq/ODV/A9H6pG1TqivRqszWaTH7QGBm3hLKUl6exbRBD1Bx2eqJJPVyv1qG8zKaDgMYyyb9SU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQOUsr13XMpZhHvssjuGecZzANBgkqhkiG9w0BAQUFADApMScwJQYDVQQDHh4ATQBBAFIAQwBFAEwATwBcAE0AYQByAGMAZQBsAG8wHhcNMTUwMjEzMDMwMDA3WhcNMTYwMjEzMDkwMDA3WjApMScwJQYDVQQDHh4ATQBBAFIAQwBFAEwATwBcAE0AYQByAGMAZQBsAG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAOJ/AFT3tgB1SREiynEKhAN+UYs49Yupec7b6yTEezwQLFeX0rg//LOx1BV6eQsh08TNlHy7rHfIUF4S7pT5PFHVZpuvnSS/pb5w6vzg1fwPR+qRtU6or0arM1mkx+0BgZt4SylJensW0QQ9QcdnqiST1cr9ahvMymg4DGMsm/UlAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAfB6OyVBXI14f+XJ+29EqVzOTuwC6cjENOMku+XoKFDmb2N6UO9C8tGOHoS7raY5Jgs5Iay8b4/gngNmnaksl+Dn3S81gL2MJmGuyQ1Jilbgl1PP5KEV3BLvbahOJfIJVm58l0TdXqTVJjYErZqRtuLwvQaY/Qh8Ro+58Zo0NS8s=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

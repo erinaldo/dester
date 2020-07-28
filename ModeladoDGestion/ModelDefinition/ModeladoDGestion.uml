@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6dbe4c57-69bf-4073-a6f7-6c2e8433d9d0"
+  name="ModeladoDGestion" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <artifact
+        Id="68d9da64-3e87-49f0-8bde-ee3fe7a2b237"
+        name="frmarticulo.cs"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="dgestion\frmarticulo.cs" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="0c4ff8d8-d0bb-411c-867e-53eedd066f46"
+        name="Operador"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="32cfba49-d9af-4639-92aa-47773ff50cd0"
+            isDerived="false"
+            sourceEndRoleName="Operador"
+            targetEndRoleName="Gestion De Artículos"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="eb562acf-a0b8-49ee-9d3f-cfb7314c548d"
+              LastKnownName="Gestion De Artículos"
+              LastKnownLocation="ModeladoDGestion.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="de1ff687-d90d-4741-b056-dd3b58d0f512"
+                  name="Operador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e8987257-c214-46cc-93e2-c16d7c0c4c33"
+                  name="Gestion De Artículos"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cb827011-2066-46c5-8fcc-80cb17ac5948"
+            isDerived="false"
+            sourceEndRoleName="Operador"
+            targetEndRoleName="Gestión de Clientes"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="41d8d548-e516-4496-b7fb-e1151c843063"
+              LastKnownName="Gestión de Clientes"
+              LastKnownLocation="ModeladoDGestion.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="22d8921e-6d6d-436e-85f5-5be9985641bb"
+                  name="Operador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d652bf29-9b99-408b-8854-3d4903186ba2"
+                  name="Gestión de Clientes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="80198c1e-efa2-4e34-a27c-784ac42d8335"
+            isDerived="false"
+            sourceEndRoleName="Operador"
+            targetEndRoleName="LogIn"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="9074acd2-aeea-4079-815b-ae0072a1e662"
+              LastKnownName="LogIn"
+              LastKnownLocation="ModeladoDGestion.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c70c911c-6112-46f8-ad1f-0bf85105ee86"
+                  name="Operador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d336cf0-29a6-4f2b-a5a7-8a4ad8dff260"
+                  name="LogIn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9d1c090c-fabf-4a15-b5d9-7c8d9a3d6edb"
+            isDerived="false"
+            sourceEndRoleName="Operador"
+            targetEndRoleName="Gestión del Personal"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0d60963a-383e-40db-ab67-ec4fd32e0b28"
+              LastKnownName="Gestión del Personal"
+              LastKnownLocation="ModeladoDGestion.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0801dcde-46b5-4326-a4dd-79a990bc94c0"
+                  name="Operador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a2b06645-b58a-4502-bc96-6ced4550f9bf"
+                  name="Gestión del Personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8d08adb0-9a48-4f44-8be8-564c4e270b44"
+            isDerived="false"
+            sourceEndRoleName="Operador"
+            targetEndRoleName="Gestión de Proveedores"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0dbcb459-10e7-484e-a1a3-ad9ce1a69b3a"
+              LastKnownName="Gestión de Proveedores"
+              LastKnownLocation="ModeladoDGestion.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="92f8150b-24b0-4df2-a998-3adcfa267835"
+                  name="Operador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="16808209-7f83-4aad-8f1e-143ee1019d0f"
+                  name="Gestión de Proveedores"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="61aeb7d2-6a6a-4bc3-abda-98a38f47603c"
+            isDerived="false"
+            sourceEndRoleName="Operador"
+            targetEndRoleName="Gestión de Listas de Precio"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6f62d324-b76e-410f-b8ba-35ca6d384ddc"
+              LastKnownName="Gestión de Listas de Precio"
+              LastKnownLocation="ModeladoDGestion.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="60893a1d-c9cc-46c1-b303-6f97e391798e"
+                  name="Operador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a9c032cf-74a2-4ccc-bd4b-f5fb5d668c06"
+                  name="Gestión de Listas de Precio"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="eb562acf-a0b8-49ee-9d3f-cfb7314c548d"
+        name="Gestion De Artículos"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="ef72ecd1-beef-4359-b5ea-7d28bbf4a38e"
+        name="conexion.cs"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="dgestion\conexion.cs" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="41d8d548-e516-4496-b7fb-e1151c843063"
+        name="Gestión de Clientes"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9074acd2-aeea-4079-815b-ae0072a1e662"
+        name="LogIn"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="dbbb60e9-76a9-431d-9723-1b3026520d0e"
+        name="Actor1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0d60963a-383e-40db-ab67-ec4fd32e0b28"
+        name="Gestión del Personal"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0dbcb459-10e7-484e-a1a3-ad9ce1a69b3a"
+        name="Gestión de Proveedores"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b2cd159a-a315-450e-aa37-af7871ed5755"
+        name="Actor2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6f62d324-b76e-410f-b8ba-35ca6d384ddc"
+        name="Gestión de Listas de Precio"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6c2c72a2-7d2d-4ea1-8f19-9e08e056f10e"
+        name="Clase1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="ad8f0ef0-f4e6-4b27-aa72-848b3811828f"
+            isDerived="false"
+            sourceEndRoleName="Class1"
+            targetEndRoleName="Class2"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="68f15af7-fa34-4d03-93b8-e1befebf406b"
+              LastKnownName="Clase2"
+              LastKnownLocation="ModeladoDGestion.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8fe47e95-eb7e-4bff-b373-f09b6479fafa"
+                  name="Class1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e878d91e-1d27-4c64-ad67-479d21c5737a"
+                  name="Class2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="b338363d-2efa-4d38-ac3d-9c37376315f7"
+            name="Attribute1"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="368b5240-59bc-48ed-a79b-78d560d0e22b"
+            name="Operation1"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="68f15af7-fa34-4d03-93b8-e1befebf406b"
+        name="Clase2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="a7bacf7a-a4e3-4191-bfed-200cde393cc0"
+            name="Attribute1"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5d9fbb11-501d-439e-b1a3-9d9bffac48c2"
+            name="Operation1"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
