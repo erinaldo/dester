@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9a7db163586c4c428f2787af7be63a01" Name="Diagram1">
+        <EntityTypeShape EntityType="connStringDBModel.Articulo" Width="1.5" PointX="3" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.ArticuloPrecioVenta" Width="1.5" PointX="8.25" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Cliente" Width="1.5" PointX="4.5" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Componente" Width="1.5" PointX="5.25" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.CtaCteCliente" Width="1.5" PointX="11.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Detalle" Width="1.5" PointX="1.5" PointY="64.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.DetalleEntregaPlanta" Width="1.5" PointX="5.25" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.DetalleFacturaCompra" Width="1.5" PointX="8.25" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.DetalleFacturaVenta" Width="1.5" PointX="8.25" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.DetalleNotaCredito" Width="1.5" PointX="6" PointY="72" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.DetalleNotaDebito" Width="1.5" PointX="5.25" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.DetalleNotaPedido" Width="1.5" PointX="9" PointY="54.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.DetalleRecibo" Width="1.5" PointX="13.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.DetalleRemito" Width="1.5" PointX="11.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.DetalleRetiroPlanta" Width="1.5" PointX="5.25" PointY="47.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Empresa" Width="1.5" PointX="11.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.EmpresaCentro" Width="1.5" PointX="14" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.EntregaAPlanta" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Especialidad" Width="1.5" PointX="2.25" PointY="52.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.EstadoCivil" Width="1.5" PointX="1.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.EstadoSistema" Width="1.5" PointX="0.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.FacturasCompra" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.FacturasVenta" Width="1.5" PointX="6" PointY="63.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Familia" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.FormaPago" Width="1.5" PointX="2.25" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.IdentificaComprob" Width="1.5" PointX="5.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Impuesto" Width="1.5" PointX="0.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Liquidacion" Width="1.5" PointX="13.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.ListaPrecio" Width="1.5" PointX="6" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.ListaProveedor" Width="1.5" PointX="11.25" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Marca" Width="1.5" PointX="0.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.NotaCredito" Width="1.5" PointX="3.75" PointY="63.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.NotaDebito" Width="1.5" PointX="7.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.NotaPedido" Width="1.5" PointX="6.75" PointY="54.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.NumeradoresTabla" Width="1.5" PointX="5.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Parametro" Width="1.5" PointX="13.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.ParametrosReporte" Width="1.5" PointX="2.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.PermisoControl" Width="1.5" PointX="3.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.PermisoModulo" Width="1.5" PointX="1.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.PermisoUsuario" Width="1.5" PointX="6" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Personal" Width="1.5" PointX="3.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Proveedor" Width="1.5" PointX="0.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Recibo" Width="1.5" PointX="10.75" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Remito" Width="1.5" PointX="9" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.RetiroPlanta" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Rubro" Width="1.5" PointX="1.5" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.SoporteTecnico" Width="1.5" PointX="15.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.SubtipoPago" Width="1.5" PointX="11" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Suceso" Width="1.5" PointX="3" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.sysdiagram" Width="1.5" PointX="15.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TesoreriaCaja" Width="1.5" PointX="15.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TesoreriaMovimiento" Width="1.5" PointX="15.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TesoreriaTipoMovimiento" Width="1.5" PointX="7.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TipoArticulo" Width="1.5" PointX="0.75" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TipoFactura" Width="1.5" PointX="3.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TipoIva" Width="1.5" PointX="1.5" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TipoNota" Width="1.5" PointX="1.5" PointY="67.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TipoPago" Width="1.5" PointX="8.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TipoPersonal" Width="1.5" PointX="1.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TipoProducto" Width="1.5" PointX="0.75" PointY="42.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.TipoRemito" Width="1.5" PointX="6.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="connStringDBModel.Vendedor" Width="1.5" PointX="4.5" PointY="58.875" IsExpanded="true" />
+        <AssociationConnector Association="connStringDBModel.FK_Articulo_EstadoSistema" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Articulo_Familia" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Articulo_Impuesto" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Articulo_Marca" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Articulo_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Articulo_Rubro" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Articulo_TipoArticulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Articulo_TipoProducto" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_ArticuloPrecioVenta_Articulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Componente_Articulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleEntregaPlanta_Articulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleFacturaCompras_Articulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleFacturaVentas_Articulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleNotaDebito_Articulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleRemito_Articulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleRetiroPlanta_Articulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_ListaProveedor_Articulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_ArticuloPrecioVenta_ListaPrecios" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Cliente_Especialidad" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Cliente_FormaPago" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Cliente_ListaPrecios" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Cliente_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Cliente_TipoDeIva" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaCredito_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaDebito_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaPedido_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Recibos_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Remito_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaCredito_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaDebito_Detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleFacturaCompras_FacturasCompras" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleFacturaVentas_DetalleRemito" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleFacturaVentas_FacturasVentas" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleNotaCredito_NotaCredito" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleNotaPedido_NotaPedido" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleRemito_DetalleNotaPedido" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleRecibos_SubtipoPago" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleRecibos_TipoPago" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_DetalleRemito_Remito" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_EmpresaCentro_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Personal_EstadoCivil" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_PermisoUsuario_EstadoSistema" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Suceso_EstadoSistema" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_FacturasCompras_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_FacturasCompras_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_FacturasCompras_TipoFactura" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_FacturasVentas_FormaPago" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_FacturasVentas_NotaCredito" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_FacturasVentas_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_FacturasVentas_TipoFactura" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_FacturasVentas_Vendedor" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaCredito_FormaPago" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaDebito_FormaPago" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Remito_FormaPago" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_TipoIva_Impuesto" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_ListaProveedor_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaCredito_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaCredito_TipoNota" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaCredito_Vendedor" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaDebito_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaDebito_TipoNota" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaDebito_Vendedor" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_NotaPedido_Vendedor" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Remito_NotaPedido" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_PermisoControl_PermisoModulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_PermisoUsuario_PermisoControl" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_PermisoUsuario_PermisoModulo" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_PermisoUsuario_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Personal_TipoPersonal" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Recibos_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Remito_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_RetiroPlanta_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Proveedor_Rubro" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Proveedor_TipoIva" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Recibos_Vendedor" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Remito_TipoRemito" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_SubtipoPago_TipoPago" ManuallyRouted="false" />
+        <AssociationConnector Association="connStringDBModel.FK_Vendedor_TipoPersonal" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

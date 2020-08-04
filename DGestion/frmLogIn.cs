@@ -106,6 +106,22 @@ namespace DGestion
                 epPass.SetError(txtPasswd, "Ok");
             }
         }
-        
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "" && txtPasswd.Text == "")
+            {
+                btnAceptar.Enabled = false;
+            }
+            else
+            {
+                btnAceptar.Enabled = true;
+            }
+        }
+
+        private void gbLogin_Enter(object sender, EventArgs e)
+        {
+            btnAceptar.Enabled = false;
+        }
     }
 }

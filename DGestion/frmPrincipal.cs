@@ -14,6 +14,8 @@ using System.Windows.Forms;
 using System.Runtime;
 using System.Runtime.InteropServices;
 using System.Reflection;
+using System.Data.Entity;
+using DGestion.Modelo;
 
 namespace DGestion
 {
@@ -29,8 +31,13 @@ namespace DGestion
 
         CGenericBD conn = new CGenericBD();
         SqlConnection conectaEstado = new SqlConnection("Data Source=desterargentina.com.ar;Initial Catalog=DesterGestion2017;Persist Security Info=True;User ID=sa;Password=1am45d50G##");
+        connStringDB db = new connStringDB();
+
+
 
         string sVersion;
+
+        
 
         public frmPrincipal()
         {
@@ -61,19 +68,30 @@ namespace DGestion
 
         private void VerificaUsuarioEnLinea()
         {
+
+
             try
             {
                 tsUsuarioEnLinea.DropDownItems.Clear();
-                SqlCommand cm = new SqlCommand("SELECT * FROM Personal WHERE ISLOGIN = 'True'", conectaEstado);
-                SqlDataAdapter da = new SqlDataAdapter(cm);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                foreach (DataRow dr in dt.Rows)
+
+                var personal = db.Personals.Where( x => x.ISLOGIN == true);
+
+
+                foreach (var lst in personal)
                 {
-                    //if (dr["ISLOGIN"].ToString() == "True" && dr["USUARIO"].ToString() == tsUsuarioEnLinea.DropDownItems.Find())
-                    tsUsuarioEnLinea.DropDownItems.Add(dr["NOMBREYAPELLIDO"].ToString());
+                    tsUsuarioEnLinea.DropDownItems.Add(lst.NOMBREYAPELLIDO);
                 }
-                conn.DesconectarBDLeeGeneric();
+
+                //SqlCommand cm = new SqlCommand("SELECT * FROM Personal WHERE ISLOGIN = 'True'", conectaEstado);
+                //SqlDataAdapter da = new SqlDataAdapter(cm);
+                //DataTable dt = new DataTable();
+                //da.Fill(dt);
+                //foreach (DataRow dr in dt.Rows)
+                //{
+                //    //if (dr["ISLOGIN"].ToString() == "True" && dr["USUARIO"].ToString() == tsUsuarioEnLinea.DropDownItems.Find())
+                //    tsUsuarioEnLinea.DropDownItems.Add(dr["NOMBREYAPELLIDO"].ToString());
+                //}
+                //conn.DesconectarBDLeeGeneric();
             }
             catch { conn.DesconectarBDLeeGeneric(); }
         }
@@ -81,9 +99,9 @@ namespace DGestion
         private void Principal_Load(object sender, EventArgs e) {
             try {
                     lblStatusUser.Text = frmLogIn.usuarioLogeado;
-                    conn.LeeGeneric("SELECT * FROM Personal WHERE usuario='" + lblStatusUser.Text + "'", "Personal");
+                conn.LeeGeneric("SELECT * FROM Personal WHERE usuario='" + lblStatusUser.Text + "'", "Personal");
 
-                    if (conn.leerGeneric["IDTIPOPERSONAL"].ToString() == "1")
+                if (conn.leerGeneric["IDTIPOPERSONAL"].ToString() == "1")
                         lblTipoUsuairo.Text = "Director";
                     else if (conn.leerGeneric["IDTIPOPERSONAL"].ToString() == "2")
                         lblTipoUsuairo.Text = "Sistema";
@@ -92,11 +110,16 @@ namespace DGestion
                     else if (conn.leerGeneric["IDTIPOPERSONAL"].ToString() == "4")
                         lblTipoUsuairo.Text = "Operario";
                     else if (conn.leerGeneric["IDTIPOPERSONAL"].ToString() == "5")
-                        lblTipoUsuairo.Text = "Vendedor";
+                        lblTipoUsuairo.Text = "Ve ndedor";
                     else
                         lblTipoUsuairo.Text = "Sin Grupo";
 
-                    conn.DesconectarBDLeeGeneric();
+
+                //conn.LeeGeneric("SELECT * FROM Personal WHERE ISLOGIN = 'True'", "Personal");
+                //foreach (var a in conn)
+                //tsUsuarioEnLinea.DropDownItems.Add(conn.leerGeneric["NOMBREYAPELLIDO"].ToString());
+
+                conn.DesconectarBDLeeGeneric();
 
                     timer1.Enabled = true; timer1.Interval = 25;
                     GrupoUsuario = StatusBar.Items[9].Text;
@@ -598,6 +621,16 @@ namespace DGestion
         }
 
         private void tsEstadisticas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StatusBar_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void tsUsuarioEnLinea_ButtonClick(object sender, EventArgs e)
         {
 
         }

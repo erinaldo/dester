@@ -61,6 +61,7 @@
             this.gbLogin.Size = new System.Drawing.Size(367, 174);
             this.gbLogin.TabIndex = 6;
             this.gbLogin.TabStop = false;
+            this.gbLogin.Enter += new System.EventHandler(this.gbLogin_Enter);
             // 
             // btnCerrar
             // 
@@ -141,6 +142,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(161, 20);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // epUser

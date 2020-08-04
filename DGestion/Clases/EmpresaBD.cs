@@ -11,8 +11,8 @@ namespace DGestion.Clases
 {
     public class EmpresaBD
     {
-        SqlConnection conectaEmpresa = new SqlConnection("Data Source=desterargentina.com.ar;Initial Catalog=DesterGestion2017;Persist Security Info=True;User ID=sa;Password=1am45d50G#");
-        SqlConnection conectaLeeEmpresa = new SqlConnection("Data Source=desterargentina.com.ar;Initial Catalog=DesterGestion2017;Persist Security Info=True;User ID=sa;Password=1am45d50G#");
+        SqlConnection conectaEmpresa = new SqlConnection("Data Source=desterargentina.com.ar;Initial Catalog=DesterGestion2018;Persist Security Info=True;User ID=sa;Password=1am45d50G#");
+        SqlConnection conectaLeeEmpresa = new SqlConnection("Data Source=desterargentina.com.ar;Initial Catalog=DesterGestion2018;Persist Security Info=True;User ID=sa;Password=1am45d50G#");
 
         private SqlCommandBuilder cmd;
         public DataSet ds = new DataSet();

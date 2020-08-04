@@ -1,0 +1,2115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="connStringDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Articulo">
+    <Key>
+      <PropertyRef Name="IDARTICULO" />
+    </Key>
+    <Property Name="IDARTICULO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODIGO" Type="nchar" MaxLength="50" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="60" />
+    <Property Name="IDFAMILIA" Type="int" />
+    <Property Name="IDRUBRO" Type="int" />
+    <Property Name="IDMARCA" Type="int" />
+    <Property Name="IDTIPOARTICULO" Type="int" />
+    <Property Name="CODIGOFABRICA" Type="nchar" MaxLength="20" />
+    <Property Name="IDTIPOPRODUCTO" Type="int" />
+    <Property Name="IDFABRICA" Type="varchar" MaxLength="10" />
+    <Property Name="SITUACION" Type="varchar" MaxLength="1" />
+    <Property Name="COSTO" Type="money" />
+    <Property Name="PROCCOSTOENLISTA" Type="varchar" MaxLength="5" />
+    <Property Name="COSTOENLISTA" Type="money" />
+    <Property Name="IDPROVEEDOR" Type="int" />
+    <Property Name="UNIDADDEVENTA" Type="float" />
+    <Property Name="UNIDADDEMEDIDA" Type="varchar" MaxLength="10" />
+    <Property Name="CANT_ACTUAL" Type="float" />
+    <Property Name="CANT_DE_PUNTO_DE_PEDIDO" Type="float" />
+    <Property Name="CANTENCADAREPOSICION" Type="float" />
+    <Property Name="IDIMPUESTO" Type="int" />
+    <Property Name="IDESTADO" Type="int" />
+    <Property Name="CANTIDADOBTENIDA" Type="float" />
+    <Property Name="IMAGEN" Type="image" />
+    <Property Name="TIPOCODIGO" Type="int" />
+  </EntityType>
+  <EntityType Name="ArticuloPrecioVenta">
+    <Key>
+      <PropertyRef Name="IDPRECIOVENTA" />
+    </Key>
+    <Property Name="IDPRECIOVENTA" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDLISTAPRECIO" Type="int" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="PRECIO" Type="nvarchar" MaxLength="50" />
+    <Property Name="ULTIMACTUALIZACION" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IDCLIENTE" />
+    </Key>
+    <Property Name="IDCLIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RAZONSOCIAL" Type="varchar" MaxLength="150" />
+    <Property Name="NUMDECUIT" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="DOMICILIOCOMERCIAL" Type="varchar" MaxLength="45" />
+    <Property Name="LOCALIDAD" Type="varchar" MaxLength="45" />
+    <Property Name="TELEFONOSCOMERCIALES" Type="varchar" MaxLength="30" />
+    <Property Name="DOMICILIOPARTICULAR" Type="varchar" MaxLength="35" />
+    <Property Name="CONTACTO" Type="varchar" MaxLength="45" />
+    <Property Name="IDTIPOIVA" Type="int" />
+    <Property Name="IDESPECIALIDAD" Type="int" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="IDFORMADEPAGO" Type="int" />
+    <Property Name="IDLISTAPRECIO" Type="int" />
+    <Property Name="DIASENTREFACTURACION" Type="float" />
+    <Property Name="ULTIMAFACTURACION" Type="date" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+    <Property Name="IDEMPRESA" Type="int" />
+    <Property Name="NROCENTRO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Componente">
+    <Key>
+      <PropertyRef Name="IDCOMPROBANTE" />
+    </Key>
+    <Property Name="IDCOMPROBANTE" Type="int" Nullable="false" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="IDARTICULOCOMPONENTE" Type="varchar" MaxLength="12" />
+    <Property Name="CANTIDADOBTENIDA" Type="float" />
+  </EntityType>
+  <EntityType Name="CtaCteCliente">
+    <Key>
+      <PropertyRef Name="IDITEM" />
+    </Key>
+    <Property Name="IDITEM" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDCLIENTE" Type="int" />
+    <Property Name="RAZONSOCIAL" Type="nchar" MaxLength="50" />
+    <Property Name="NROCOMPROBANTE" Type="nchar" MaxLength="10" />
+    <Property Name="TIPOCOMPROBANTE" Type="nchar" MaxLength="10" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="DEBE" Type="money" />
+    <Property Name="HABER" Type="money" />
+    <Property Name="SALDO" Type="money" />
+    <Property Name="MONTOPENDIENTE" Type="money" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+    <Property Name="PAGADO" Type="money" />
+    <Property Name="PENDIENTE" Type="money" />
+    <Property Name="IMPORTERESTANTE" Type="money" />
+    <Property Name="IDEMPRESA" Type="int" />
+    <Property Name="NRONOTACREDITO" Type="int" />
+  </EntityType>
+  <EntityType Name="Detalle">
+    <Key>
+      <PropertyRef Name="IDDETALLE" />
+    </Key>
+    <Property Name="IDDETALLE" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCIONBLOBSUBTYPE" Type="text" />
+  </EntityType>
+  <EntityType Name="DetalleEntregaPlanta">
+    <Key>
+      <PropertyRef Name="ENTREGAAPLANTA" />
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="ENTREGAAPLANTA" Type="float" Nullable="false" />
+    <Property Name="CODIGO" Type="int" Nullable="false" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PENDIENTE" Type="float" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+    <Property Name="DETALLERETIRODEPLANTA" Type="float" />
+  </EntityType>
+  <EntityType Name="DetalleFacturaCompras">
+    <Key>
+      <PropertyRef Name="IDDETALLEFACTURACOMPRAS" />
+    </Key>
+    <Property Name="IDDETALLEFACTURACOMPRAS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PRECUNITARIO" Type="money" />
+    <Property Name="SUBTOTAL" Type="money" />
+    <Property Name="DESCUENTO" Type="float" />
+    <Property Name="PORCDESC" Type="float" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="IMPORTE" Type="money" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+    <Property Name="NROFACTURAINTERNO" Type="int" />
+  </EntityType>
+  <EntityType Name="DetalleFacturaVentas">
+    <Key>
+      <PropertyRef Name="IDDETALLEFACTURAVENTAS" />
+    </Key>
+    <Property Name="IDDETALLEFACTURAVENTAS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="CANTIDAD" Type="int" />
+    <Property Name="PRECUNITARIO" Type="money" />
+    <Property Name="IMPORTE" Type="money" />
+    <Property Name="DESCUENTO" Type="money" />
+    <Property Name="PORCDESC" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="SUBTOTAL" Type="money" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="250" />
+    <Property Name="NROFACTURAINTERNO" Type="int" />
+    <Property Name="IDDETALLEREMITO" Type="int" />
+  </EntityType>
+  <EntityType Name="DetalleNotaCredito">
+    <Key>
+      <PropertyRef Name="IDDETALLENOTACREDITO" />
+    </Key>
+    <Property Name="IDDETALLENOTACREDITO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="CANTIDAD" Type="int" />
+    <Property Name="PENDIENTE" Type="float" />
+    <Property Name="PRECUNITARIO" Type="money" />
+    <Property Name="IMPORTE" Type="money" />
+    <Property Name="DESCUENTO" Type="float" />
+    <Property Name="PORCDESC" Type="float" />
+    <Property Name="SUBTOTAL" Type="money" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="250" />
+    <Property Name="NRONOTAINTERNO" Type="int" />
+  </EntityType>
+  <EntityType Name="DetalleNotaDebito">
+    <Key>
+      <PropertyRef Name="IDDETALLENOTADEBITO" />
+    </Key>
+    <Property Name="IDDETALLENOTADEBITO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PENDIENTE" Type="float" />
+    <Property Name="PRECUNITARIO" Type="money" />
+    <Property Name="IMPORTE" Type="money" />
+    <Property Name="DESCUENTO" Type="float" />
+    <Property Name="PORCDESC" Type="float" />
+    <Property Name="SUBTOTAL" Type="money" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="250" />
+    <Property Name="NRONOTAINTERNO" Type="int" />
+  </EntityType>
+  <EntityType Name="DetalleNotaPedido">
+    <Key>
+      <PropertyRef Name="IDDETALLENOTAPEDIDO" />
+    </Key>
+    <Property Name="IDDETALLENOTAPEDIDO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="CANTIDADPEDIDA" Type="int" Nullable="false" />
+    <Property Name="REASIGNADO" Type="int" />
+    <Property Name="CANTIDADRESTANTE" Type="int" Nullable="false" />
+    <Property Name="CANTIDADAENTREGA" Type="int" />
+    <Property Name="PRECUNITARIO" Type="money" />
+    <Property Name="SUBTOTAL" Type="money" />
+    <Property Name="DESCUENTO" Type="float" />
+    <Property Name="PORCDESC" Type="float" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="IMPORTE" Type="money" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="50" />
+    <Property Name="IDNOTAPEDIDO" Type="int" />
+    <Property Name="REMITIDO" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="DetalleRecibos">
+    <Key>
+      <PropertyRef Name="IDDETALLERECIBO" />
+    </Key>
+    <Property Name="IDDETALLERECIBO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDTIPOPAGO" Type="int" />
+    <Property Name="IDSUBTIPODEPAGO" Type="int" />
+    <Property Name="NUMERO" Type="bigint" />
+    <Property Name="IMPORTE" Type="money" />
+    <Property Name="NRORECIBOINTERNO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleRemito">
+    <Key>
+      <PropertyRef Name="IDDETALLEREMITO" />
+    </Key>
+    <Property Name="IDDETALLEREMITO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PRECUNITARIO" Type="money" />
+    <Property Name="SUBTOTAL" Type="money" />
+    <Property Name="DESCUENTO" Type="float" />
+    <Property Name="PORCDESC" Type="float" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="IMPORTE" Type="money" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="FACTURABLE" Type="varchar" MaxLength="2" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="250" />
+    <Property Name="CANTPENDIENTE" Type="float" />
+    <Property Name="DETALLEFACTURA" Type="float" />
+    <Property Name="NROREMITOINTERNO" Type="int" />
+    <Property Name="IDDETALLENOTAPEDIDO" Type="int" />
+  </EntityType>
+  <EntityType Name="DetalleRetiroPlanta">
+    <Key>
+      <PropertyRef Name="RETIRODEPLANTA" />
+      <PropertyRef Name="IDDETALLERETIROPLANTA" />
+    </Key>
+    <Property Name="RETIRODEPLANTA" Type="float" Nullable="false" />
+    <Property Name="IDDETALLERETIROPLANTA" Type="int" Nullable="false" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+    <Property Name="CANTPENDIENTE" Type="float" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IDEMPRESA" />
+    </Key>
+    <Property Name="IDEMPRESA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RAZONSOCIAL" Type="varchar" MaxLength="35" />
+    <Property Name="CUIT" Type="varchar" MaxLength="20" />
+    <Property Name="INGRESOBRUTO" Type="varchar" MaxLength="50" />
+    <Property Name="FECHAINICIOACTIV" Type="date" />
+    <Property Name="DOMICILIOFISCAL" Type="varchar" MaxLength="250" />
+    <Property Name="TELEFONOCOMERCIAL" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EmpresaCentro">
+    <Key>
+      <PropertyRef Name="IDEMPRESACENTRO" />
+    </Key>
+    <Property Name="IDEMPRESACENTRO" Type="int" Nullable="false" />
+    <Property Name="NROCENTRO" Type="nchar" MaxLength="10" />
+    <Property Name="DOMICILIOCENTRO" Type="nchar" MaxLength="100" />
+    <Property Name="IDEMPRESA" Type="int" />
+  </EntityType>
+  <EntityType Name="EntregaAPlanta">
+    <Key>
+      <PropertyRef Name="NROENTREGAAPLANTA" />
+    </Key>
+    <Property Name="NROENTREGAAPLANTA" Type="float" Nullable="false" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Especialidad">
+    <Key>
+      <PropertyRef Name="IDESPECIALIDAD" />
+    </Key>
+    <Property Name="IDESPECIALIDAD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EstadoCivil">
+    <Key>
+      <PropertyRef Name="IDESTADOCIVIL" />
+    </Key>
+    <Property Name="IDESTADOCIVIL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="EstadoSistema">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FacturasCompras">
+    <Key>
+      <PropertyRef Name="NROFACTURAINTERNO" />
+    </Key>
+    <Property Name="NROFACTURAINTERNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NROFACTURA" Type="nchar" MaxLength="10" />
+    <Property Name="SUCURSAL" Type="nchar" MaxLength="10" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="IDTIPOFACTURA" Type="int" />
+    <Property Name="IDPROVEEDOR" Type="int" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="BASICO" Type="money" />
+    <Property Name="DESCUENTOS" Type="float" />
+    <Property Name="IMPUESTOS1" Type="money" />
+    <Property Name="IMPUESTOS2" Type="money" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+    <Property Name="IDEMPRESA" Type="int" />
+  </EntityType>
+  <EntityType Name="FacturasVentas">
+    <Key>
+      <PropertyRef Name="NROFACTURAINTERNO" />
+    </Key>
+    <Property Name="NROFACTURAINTERNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NROFACTURA" Type="int" />
+    <Property Name="SUCURSAL" Type="nchar" MaxLength="10" />
+    <Property Name="IDTIPOFACTURA" Type="int" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="IDCLIENTE" Type="int" />
+    <Property Name="IDVENDEDOR" Type="int" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="IDFORMAPAGO" Type="int" />
+    <Property Name="BASICO" Type="money" />
+    <Property Name="PORCDESC" Type="int" />
+    <Property Name="DESCUENTOS" Type="nchar" MaxLength="10" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="IDDETALLE" Type="int" />
+    <Property Name="IMPRESA" Type="bit" />
+    <Property Name="PAGADO" Type="money" />
+    <Property Name="PENDIENTE" Type="money" />
+    <Property Name="SALDO" Type="money" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="250" />
+    <Property Name="NRORECIBOINTERNO" Type="int" Nullable="false" />
+    <Property Name="IDIDENTIFICADOR" Type="int" />
+    <Property Name="IDESTADO" Type="int" />
+    <Property Name="IDEMPRESA" Type="int" />
+    <Property Name="NRONCINTERNO" Type="int" />
+    <Property Name="NRONC" Type="int" />
+  </EntityType>
+  <EntityType Name="Familia">
+    <Key>
+      <PropertyRef Name="IDFAMILIA" />
+    </Key>
+    <Property Name="IDFAMILIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FormaPago">
+    <Key>
+      <PropertyRef Name="IDFORMAPAGO" />
+    </Key>
+    <Property Name="IDFORMAPAGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="45" />
+    <Property Name="DESCUENTO" Type="float" />
+  </EntityType>
+  <EntityType Name="IdentificaComprob">
+    <Key>
+      <PropertyRef Name="IDIDENTIFICADOR" />
+    </Key>
+    <Property Name="IDIDENTIFICADOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDENTIFICADOR" Type="nchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Impuesto">
+    <Key>
+      <PropertyRef Name="IDIMPUESTO" />
+    </Key>
+    <Property Name="IDIMPUESTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="40" />
+    <Property Name="ABREVIATURA" Type="varchar" MaxLength="10" />
+    <Property Name="ALICUOTA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Liquidacion">
+    <Key>
+      <PropertyRef Name="NROLIQUIDACION" />
+    </Key>
+    <Property Name="NROLIQUIDACION" Type="float" Nullable="false" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="PAGADO" Type="int" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ListaPrecios">
+    <Key>
+      <PropertyRef Name="IDLISTAPRECIO" />
+    </Key>
+    <Property Name="IDLISTAPRECIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+    <Property Name="PORCENTAJE" Type="float" />
+    <Property Name="PORCFLETE" Type="float" />
+    <Property Name="CRITERIO" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ListaProveedor">
+    <Key>
+      <PropertyRef Name="IDITEMLISTA" />
+    </Key>
+    <Property Name="IDITEMLISTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDPROVEEDOR" Type="int" />
+    <Property Name="IDARTICULO" Type="int" />
+    <Property Name="PRECIO" Type="money" />
+    <Property Name="FECHACOMPRA" Type="date" />
+  </EntityType>
+  <EntityType Name="Marca">
+    <Key>
+      <PropertyRef Name="IDMARCA" />
+    </Key>
+    <Property Name="IDMARCA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NotaCredito">
+    <Key>
+      <PropertyRef Name="NRONOTAINTERNO" />
+    </Key>
+    <Property Name="NRONOTAINTERNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NRONOTACRED" Type="int" />
+    <Property Name="IDTIPONOTA" Type="int" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="SUCURSAL" Type="nchar" MaxLength="10" />
+    <Property Name="IDCLIENTE" Type="int" />
+    <Property Name="IDVENDEDOR" Type="int" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="IDFORMADEPAGO" Type="int" />
+    <Property Name="BASICO" Type="money" />
+    <Property Name="PORCDESC" Type="float" />
+    <Property Name="DESCUENTOS" Type="float" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="IDDETALLE" Type="int" />
+    <Property Name="IMPRESA" Type="int" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="250" />
+    <Property Name="IDIDENTIFICADOR" Type="int" />
+    <Property Name="NRORECIBOINTERNO" Type="int" />
+    <Property Name="IDESTADO" Type="int" />
+    <Property Name="IDEMPRESA" Type="int" />
+  </EntityType>
+  <EntityType Name="NotaDebito">
+    <Key>
+      <PropertyRef Name="NRONOTAINTERNO" />
+    </Key>
+    <Property Name="NRONOTAINTERNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NRONOTADEBITO" Type="int" />
+    <Property Name="IDTIPONOTA" Type="int" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="SUCURSAL" Type="nchar" MaxLength="10" />
+    <Property Name="IDCLIENTE" Type="int" />
+    <Property Name="IDVENDEDOR" Type="int" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="IDFORMADEPAGO" Type="int" />
+    <Property Name="BASICO" Type="money" />
+    <Property Name="PORCDESC" Type="float" />
+    <Property Name="DESCUENTOS" Type="float" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="IDDETALLE" Type="int" />
+    <Property Name="IMPRESA" Type="int" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="250" />
+    <Property Name="IDIDENTIFICADOR" Type="int" />
+    <Property Name="NRORECIBOINTERNO" Type="int" />
+    <Property Name="IDESTADO" Type="int" />
+    <Property Name="IDEMPRESA" Type="int" />
+  </EntityType>
+  <EntityType Name="NotaPedido">
+    <Key>
+      <PropertyRef Name="IDNOTAPEDIDO" />
+    </Key>
+    <Property Name="IDNOTAPEDIDO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NRONOTAPEDIDO" Type="int" />
+    <Property Name="FECHANOTA" Type="date" />
+    <Property Name="SUCURSAL" Type="nchar" MaxLength="10" />
+    <Property Name="IDCLIENTE" Type="int" />
+    <Property Name="IDVENDEDOR" Type="int" />
+    <Property Name="BASICO" Type="money" />
+    <Property Name="DESCUENTO" Type="money" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+    <Property Name="SITUACION" Type="varchar" MaxLength="15" />
+    <Property Name="IDEMPRESA" Type="int" />
+  </EntityType>
+  <EntityType Name="NumeradoresTablas">
+    <Key>
+      <PropertyRef Name="IDTABLA" />
+    </Key>
+    <Property Name="IDTABLA" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CAMPO" Type="varchar" MaxLength="30" />
+    <Property Name="ULTIMONUMERO" Type="int" />
+  </EntityType>
+  <EntityType Name="Parametros">
+    <Key>
+      <PropertyRef Name="IDPARAMETROS" />
+    </Key>
+    <Property Name="IDPARAMETROS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VERSIONSISTEMA" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="CONEXION_STRING" Type="text" />
+    <Property Name="DIRECCION" Type="text" />
+    <Property Name="NOMBREBD" Type="text" />
+    <Property Name="USUARIO" Type="text" />
+    <Property Name="CONTRASEÑA" Type="text" />
+  </EntityType>
+  <EntityType Name="ParametrosReportes">
+    <Key>
+      <PropertyRef Name="NOMBRE" />
+    </Key>
+    <Property Name="NOMBRE" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="VALORNUMERICO" Type="float" />
+    <Property Name="VALORALFANUMERICO" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PermisoControl">
+    <Key>
+      <PropertyRef Name="IdControl" />
+    </Key>
+    <Property Name="IdControl" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Control" Type="varchar" MaxLength="200" />
+    <Property Name="IdModulo" Type="int" />
+  </EntityType>
+  <EntityType Name="PermisoModulo">
+    <Key>
+      <PropertyRef Name="IdModulo" />
+    </Key>
+    <Property Name="IdModulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modulo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PermisoUsuario">
+    <Key>
+      <PropertyRef Name="IdPermisoUsuario" />
+    </Key>
+    <Property Name="IdPermisoUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPersonal" Type="int" />
+    <Property Name="IdModulo" Type="int" />
+    <Property Name="IdControl" Type="int" />
+    <Property Name="IdEstadoSistema" Type="int" />
+  </EntityType>
+  <EntityType Name="Personal">
+    <Key>
+      <PropertyRef Name="IDPERSONAL" />
+    </Key>
+    <Property Name="IDPERSONAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DNI" Type="nchar" MaxLength="10" />
+    <Property Name="LEGAJO" Type="nchar" MaxLength="10" />
+    <Property Name="NOMBREYAPELLIDO" Type="varchar" MaxLength="45" />
+    <Property Name="DOMICILIO" Type="varchar" MaxLength="45" />
+    <Property Name="TELFIJO" Type="varchar" MaxLength="30" />
+    <Property Name="TELCELULAR" Type="nchar" MaxLength="30" />
+    <Property Name="FECHANACIMIENTO" Type="datetime" />
+    <Property Name="IDESTADOCIVIL" Type="int" />
+    <Property Name="NRODECARTILLASANITARIA" Type="int" />
+    <Property Name="VENCIMIENTO" Type="datetime" />
+    <Property Name="NOMBRECONYUGE" Type="varchar" MaxLength="45" />
+    <Property Name="FECHANACCONYUGE" Type="datetime" />
+    <Property Name="IDTIPOPERSONAL" Type="int" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+    <Property Name="USUARIO" Type="nchar" MaxLength="50" />
+    <Property Name="PASSWORD" Type="nchar" MaxLength="50" />
+    <Property Name="ISLOGIN" Type="bit" Nullable="false" />
+    <Property Name="IDESTADO" Type="int" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="IDPROVEEDOR" />
+    </Key>
+    <Property Name="IDPROVEEDOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RAZONSOCIAL" Type="varchar" MaxLength="45" />
+    <Property Name="DOMICILIO" Type="varchar" MaxLength="45" />
+    <Property Name="TELEFONOS" Type="varchar" MaxLength="30" />
+    <Property Name="CONTACTO" Type="varchar" MaxLength="45" />
+    <Property Name="IDRUBRO" Type="int" />
+    <Property Name="IDTIPOIVA" Type="int" />
+    <Property Name="NRODECUIT" Type="varchar" MaxLength="50" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+    <Property Name="IDEMPRESA" Type="int" />
+  </EntityType>
+  <EntityType Name="Recibos">
+    <Key>
+      <PropertyRef Name="NRORECIBOINTERNO" />
+    </Key>
+    <Property Name="NRORECIBOINTERNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NRORECIBO" Type="int" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="SUCURSAL" Type="nchar" MaxLength="10" />
+    <Property Name="IDCLIENTE" Type="int" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="IDVENDEDOR" Type="int" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="250" />
+    <Property Name="IDIDENTIFICADOR" Type="int" />
+    <Property Name="NROFACTURAINTERNO" Type="int" />
+    <Property Name="IMPORTERESTANTE" Type="money" />
+    <Property Name="IDESTADO" Type="int" />
+    <Property Name="IDEMPRESA" Type="int" />
+  </EntityType>
+  <EntityType Name="Remito">
+    <Key>
+      <PropertyRef Name="NROREMITOINTERNO" />
+    </Key>
+    <Property Name="NROREMITOINTERNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NROREMITO" Type="int" />
+    <Property Name="SUCURSAL" Type="nchar" MaxLength="10" />
+    <Property Name="IDTIPOREMITO" Type="int" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="IDCLIENTE" Type="int" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="IDFORMAPAGO" Type="int" />
+    <Property Name="BASICO" Type="money" />
+    <Property Name="PORCDESC" Type="money" />
+    <Property Name="DESCUENTO" Type="money" />
+    <Property Name="IMPUESTO1" Type="money" />
+    <Property Name="IMPUESTO2" Type="money" />
+    <Property Name="TOTAL" Type="money" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="250" />
+    <Property Name="IDNOTAPEDIDO" Type="int" />
+    <Property Name="ESTADOREMITO" Type="varchar" MaxLength="15" />
+    <Property Name="NROFACTURAINTERNO" Type="int" />
+    <Property Name="IDEMPRESA" Type="int" />
+  </EntityType>
+  <EntityType Name="RetiroPlanta">
+    <Key>
+      <PropertyRef Name="NRORETIRODEPLANTA" />
+    </Key>
+    <Property Name="NRORETIRODEPLANTA" Type="float" Nullable="false" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Rubro">
+    <Key>
+      <PropertyRef Name="IDRUBRO" />
+    </Key>
+    <Property Name="IDRUBRO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SoporteTecnico">
+    <Key>
+      <PropertyRef Name="NROTIQUET" />
+    </Key>
+    <Property Name="NROTIQUET" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHASOLICITUD" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="text" Nullable="false" />
+    <Property Name="PRIORIDAD" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="20" />
+    <Property Name="ESTADOACTUAL" Type="varchar" MaxLength="20" />
+    <Property Name="OBSERVACIONES" Type="text" />
+  </EntityType>
+  <EntityType Name="SubtipoPago">
+    <Key>
+      <PropertyRef Name="IDSUBTIPOPAGO" />
+    </Key>
+    <Property Name="IDSUBTIPOPAGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="45" />
+    <Property Name="IDTIPOPAGO" Type="int" />
+  </EntityType>
+  <EntityType Name="Suceso">
+    <Key>
+      <PropertyRef Name="IDSUCESO" />
+    </Key>
+    <Property Name="IDSUCESO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENTO" Type="varchar" MaxLength="250" />
+    <Property Name="FECHAHORA" Type="datetime" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="15" />
+    <Property Name="IDESTADO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TesoreriaCaja">
+    <Key>
+      <PropertyRef Name="NroCaja" />
+    </Key>
+    <Property Name="NroCaja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sucursal" Type="nchar" MaxLength="10" />
+    <Property Name="NombreCaja" Type="varchar" MaxLength="50" />
+    <Property Name="FechaApertura" Type="date" />
+    <Property Name="SaldoApertura" Type="money" />
+    <Property Name="FechaCierre" Type="date" />
+    <Property Name="SaldoCierre" Type="money" />
+    <Property Name="IngresoTotal" Type="money" />
+    <Property Name="FechaCreacion" Type="date" />
+    <Property Name="Usuario" Type="varchar" MaxLength="15" />
+    <Property Name="IdEstadoCaja" Type="int" />
+    <Property Name="IdEmpresa" Type="int" />
+  </EntityType>
+  <EntityType Name="TesoreriaMovimiento">
+    <Key>
+      <PropertyRef Name="IdMov" />
+    </Key>
+    <Property Name="IdMov" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sucursal" Type="varchar" MaxLength="10" />
+    <Property Name="IdTipoMov" Type="int" />
+    <Property Name="TipoMov" Type="varchar" MaxLength="15" />
+    <Property Name="FechaMov" Type="date" />
+    <Property Name="IngresoMov" Type="money" />
+    <Property Name="EgresoMov" Type="money" />
+    <Property Name="Usuario" Type="varchar" MaxLength="20" />
+    <Property Name="NroCaja" Type="int" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="Observacion" Type="text" />
+    <Property Name="NROFACTURAINTERNO" Type="int" />
+    <Property Name="NroReciboInterno" Type="int" />
+    <Property Name="NroFactu" Type="varchar" MaxLength="50" />
+    <Property Name="NroRecibo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TesoreriaTipoMovimiento">
+    <Key>
+      <PropertyRef Name="IDTIPOMOVIMIENTO" />
+    </Key>
+    <Property Name="IDTIPOMOVIMIENTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TipoArticulo">
+    <Key>
+      <PropertyRef Name="IDTIPOARTICULO" />
+    </Key>
+    <Property Name="IDTIPOARTICULO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TipoFactura">
+    <Key>
+      <PropertyRef Name="IDTIPOFACTURA" />
+    </Key>
+    <Property Name="IDTIPOFACTURA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoIva">
+    <Key>
+      <PropertyRef Name="IDTIPOIVA" />
+    </Key>
+    <Property Name="IDTIPOIVA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="25" />
+    <Property Name="IDIMPUESTO" Type="int" />
+  </EntityType>
+  <EntityType Name="TipoNota">
+    <Key>
+      <PropertyRef Name="IDTIPONOTA" />
+    </Key>
+    <Property Name="IDTIPONOTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TipoPago">
+    <Key>
+      <PropertyRef Name="IDTIPOPAGO" />
+    </Key>
+    <Property Name="IDTIPOPAGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TipoPersonal">
+    <Key>
+      <PropertyRef Name="IDTIPOPERSONAL" />
+    </Key>
+    <Property Name="IDTIPOPERSONAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="35" />
+  </EntityType>
+  <EntityType Name="TipoProducto">
+    <Key>
+      <PropertyRef Name="IDTIPOPRODUCTO" />
+    </Key>
+    <Property Name="IDTIPOPRODUCTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TipoRemito">
+    <Key>
+      <PropertyRef Name="IDTIPOREMITO" />
+    </Key>
+    <Property Name="IDTIPOREMITO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Vendedor">
+    <Key>
+      <PropertyRef Name="IDVENDEDOR" />
+    </Key>
+    <Property Name="IDVENDEDOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMISION" Type="float" />
+    <Property Name="IDPERSONAL" Type="int" />
+    <Property Name="IDTIPOPERSONAL" Type="int" />
+  </EntityType>
+  <Association Name="FK_Articulo_EstadoSistema">
+    <End Role="EstadoSistema" Type="Self.EstadoSistema" Multiplicity="0..1" />
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoSistema">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IDESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articulo_Familia">
+    <End Role="Familia" Type="Self.Familia" Multiplicity="0..1" />
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Familia">
+        <PropertyRef Name="IDFAMILIA" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IDFAMILIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articulo_Impuesto">
+    <End Role="Impuesto" Type="Self.Impuesto" Multiplicity="0..1" />
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Impuesto">
+        <PropertyRef Name="IDIMPUESTO" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IDIMPUESTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articulo_Marca">
+    <End Role="Marca" Type="Self.Marca" Multiplicity="0..1" />
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marca">
+        <PropertyRef Name="IDMARCA" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IDMARCA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articulo_Proveedor">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="0..1" />
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IDPROVEEDOR" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IDPROVEEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articulo_Rubro">
+    <End Role="Rubro" Type="Self.Rubro" Multiplicity="0..1" />
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rubro">
+        <PropertyRef Name="IDRUBRO" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IDRUBRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articulo_TipoArticulo">
+    <End Role="TipoArticulo" Type="Self.TipoArticulo" Multiplicity="0..1" />
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoArticulo">
+        <PropertyRef Name="IDTIPOARTICULO" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IDTIPOARTICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articulo_TipoProducto">
+    <End Role="TipoProducto" Type="Self.TipoProducto" Multiplicity="0..1" />
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoProducto">
+        <PropertyRef Name="IDTIPOPRODUCTO" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IDTIPOPRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArticuloPrecioVenta_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="0..1" />
+    <End Role="ArticuloPrecioVenta" Type="Self.ArticuloPrecioVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IDARTICULO" />
+      </Principal>
+      <Dependent Role="ArticuloPrecioVenta">
+        <PropertyRef Name="IDARTICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArticuloPrecioVenta_ListaPrecios">
+    <End Role="ListaPrecios" Type="Self.ListaPrecios" Multiplicity="0..1" />
+    <End Role="ArticuloPrecioVenta" Type="Self.ArticuloPrecioVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecios">
+        <PropertyRef Name="IDLISTAPRECIO" />
+      </Principal>
+      <Dependent Role="ArticuloPrecioVenta">
+        <PropertyRef Name="IDLISTAPRECIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Especialidad">
+    <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="0..1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Especialidad">
+        <PropertyRef Name="IDESPECIALIDAD" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IDESPECIALIDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_FormaPago">
+    <End Role="FormaPago" Type="Self.FormaPago" Multiplicity="0..1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IDFORMAPAGO" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IDFORMADEPAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_ListaPrecios">
+    <End Role="ListaPrecios" Type="Self.ListaPrecios" Multiplicity="0..1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecios">
+        <PropertyRef Name="IDLISTAPRECIO" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IDLISTAPRECIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="IDPERSONAL" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IDPERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_TipoDeIva">
+    <End Role="TipoIva" Type="Self.TipoIva" Multiplicity="0..1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIva">
+        <PropertyRef Name="IDTIPOIVA" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IDTIPOIVA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Componente_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="0..1" />
+    <End Role="Componente" Type="Self.Componente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IDARTICULO" />
+      </Principal>
+      <Dependent Role="Componente">
+        <PropertyRef Name="IDARTICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleEntregaPlanta_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="0..1" />
+    <End Role="DetalleEntregaPlanta" Type="Self.DetalleEntregaPlanta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IDARTICULO" />
+      </Principal>
+      <Dependent Role="DetalleEntregaPlanta">
+        <PropertyRef Name="IDARTICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleFacturaCompras_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="0..1" />
+    <End Role="DetalleFacturaCompras" Type="Self.DetalleFacturaCompras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IDARTICULO" />
+      </Principal>
+      <Dependent Role="DetalleFacturaCompras">
+        <PropertyRef Name="IDARTICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleFacturaCompras_FacturasCompras">
+    <End Role="FacturasCompras" Type="Self.FacturasCompras" Multiplicity="0..1" />
+    <End Role="DetalleFacturaCompras" Type="Self.DetalleFacturaCompras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FacturasCompras">
+        <PropertyRef Name="NROFACTURAINTERNO" />
+      </Principal>
+      <Dependent Role="DetalleFacturaCompras">
+        <PropertyRef Name="NROFACTURAINTERNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleFacturaVentas_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="0..1" />
+    <End Role="DetalleFacturaVentas" Type="Self.DetalleFacturaVentas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IDARTICULO" />
+      </Principal>
+      <Dependent Role="DetalleFacturaVentas">
+        <PropertyRef Name="IDARTICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleFacturaVentas_DetalleRemito">
+    <End Role="DetalleRemito" Type="Self.DetalleRemito" Multiplicity="0..1" />
+    <End Role="DetalleFacturaVentas" Type="Self.DetalleFacturaVentas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleRemito">
+        <PropertyRef Name="IDDETALLEREMITO" />
+      </Principal>
+      <Dependent Role="DetalleFacturaVentas">
+        <PropertyRef Name="IDDETALLEREMITO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleFacturaVentas_FacturasVentas">
+    <End Role="FacturasVentas" Type="Self.FacturasVentas" Multiplicity="0..1" />
+    <End Role="DetalleFacturaVentas" Type="Self.DetalleFacturaVentas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FacturasVentas">
+        <PropertyRef Name="NROFACTURAINTERNO" />
+      </Principal>
+      <Dependent Role="DetalleFacturaVentas">
+        <PropertyRef Name="NROFACTURAINTERNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleNotaCredito_NotaCredito">
+    <End Role="NotaCredito" Type="Self.NotaCredito" Multiplicity="0..1" />
+    <End Role="DetalleNotaCredito" Type="Self.DetalleNotaCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotaCredito">
+        <PropertyRef Name="NRONOTAINTERNO" />
+      </Principal>
+      <Dependent Role="DetalleNotaCredito">
+        <PropertyRef Name="NRONOTAINTERNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleNotaDebito_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="0..1" />
+    <End Role="DetalleNotaDebito" Type="Self.DetalleNotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IDARTICULO" />
+      </Principal>
+      <Dependent Role="DetalleNotaDebito">
+        <PropertyRef Name="IDARTICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleNotaPedido_NotaPedido">
+    <End Role="NotaPedido" Type="Self.NotaPedido" Multiplicity="0..1" />
+    <End Role="DetalleNotaPedido" Type="Self.DetalleNotaPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotaPedido">
+        <PropertyRef Name="IDNOTAPEDIDO" />
+      </Principal>
+      <Dependent Role="DetalleNotaPedido">
+        <PropertyRef Name="IDNOTAPEDIDO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleRecibos_SubtipoPago">
+    <End Role="SubtipoPago" Type="Self.SubtipoPago" Multiplicity="0..1" />
+    <End Role="DetalleRecibos" Type="Self.DetalleRecibos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubtipoPago">
+        <PropertyRef Name="IDSUBTIPOPAGO" />
+      </Principal>
+      <Dependent Role="DetalleRecibos">
+        <PropertyRef Name="IDSUBTIPODEPAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleRecibos_TipoPago">
+    <End Role="TipoPago" Type="Self.TipoPago" Multiplicity="0..1" />
+    <End Role="DetalleRecibos" Type="Self.DetalleRecibos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPago">
+        <PropertyRef Name="IDTIPOPAGO" />
+      </Principal>
+      <Dependent Role="DetalleRecibos">
+        <PropertyRef Name="IDTIPOPAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleRemito_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="0..1" />
+    <End Role="DetalleRemito" Type="Self.DetalleRemito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IDARTICULO" />
+      </Principal>
+      <Dependent Role="DetalleRemito">
+        <PropertyRef Name="IDARTICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleRemito_DetalleNotaPedido">
+    <End Role="DetalleNotaPedido" Type="Self.DetalleNotaPedido" Multiplicity="0..1" />
+    <End Role="DetalleRemito" Type="Self.DetalleRemito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleNotaPedido">
+        <PropertyRef Name="IDDETALLENOTAPEDIDO" />
+      </Principal>
+      <Dependent Role="DetalleRemito">
+        <PropertyRef Name="IDDETALLENOTAPEDIDO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleRemito_Remito">
+    <End Role="Remito" Type="Self.Remito" Multiplicity="0..1" />
+    <End Role="DetalleRemito" Type="Self.DetalleRemito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Remito">
+        <PropertyRef Name="NROREMITOINTERNO" />
+      </Principal>
+      <Dependent Role="DetalleRemito">
+        <PropertyRef Name="NROREMITOINTERNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleRetiroPlanta_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="0..1" />
+    <End Role="DetalleRetiroPlanta" Type="Self.DetalleRetiroPlanta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IDARTICULO" />
+      </Principal>
+      <Dependent Role="DetalleRetiroPlanta">
+        <PropertyRef Name="IDARTICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaCentro_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+    <End Role="EmpresaCentro" Type="Self.EmpresaCentro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEMPRESA" />
+      </Principal>
+      <Dependent Role="EmpresaCentro">
+        <PropertyRef Name="IDEMPRESA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturasCompras_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+    <End Role="FacturasCompras" Type="Self.FacturasCompras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="IDPERSONAL" />
+      </Principal>
+      <Dependent Role="FacturasCompras">
+        <PropertyRef Name="IDPERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturasCompras_Proveedor">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="0..1" />
+    <End Role="FacturasCompras" Type="Self.FacturasCompras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IDPROVEEDOR" />
+      </Principal>
+      <Dependent Role="FacturasCompras">
+        <PropertyRef Name="IDPROVEEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturasCompras_TipoFactura">
+    <End Role="TipoFactura" Type="Self.TipoFactura" Multiplicity="0..1" />
+    <End Role="FacturasCompras" Type="Self.FacturasCompras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoFactura">
+        <PropertyRef Name="IDTIPOFACTURA" />
+      </Principal>
+      <Dependent Role="FacturasCompras">
+        <PropertyRef Name="IDTIPOFACTURA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturasVentas_FormaPago">
+    <End Role="FormaPago" Type="Self.FormaPago" Multiplicity="0..1" />
+    <End Role="FacturasVentas" Type="Self.FacturasVentas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IDFORMAPAGO" />
+      </Principal>
+      <Dependent Role="FacturasVentas">
+        <PropertyRef Name="IDFORMAPAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturasVentas_NotaCredito">
+    <End Role="NotaCredito" Type="Self.NotaCredito" Multiplicity="0..1" />
+    <End Role="FacturasVentas" Type="Self.FacturasVentas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotaCredito">
+        <PropertyRef Name="NRONOTAINTERNO" />
+      </Principal>
+      <Dependent Role="FacturasVentas">
+        <PropertyRef Name="NRONCINTERNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturasVentas_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+    <End Role="FacturasVentas" Type="Self.FacturasVentas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="IDPERSONAL" />
+      </Principal>
+      <Dependent Role="FacturasVentas">
+        <PropertyRef Name="IDPERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturasVentas_TipoFactura">
+    <End Role="TipoFactura" Type="Self.TipoFactura" Multiplicity="0..1" />
+    <End Role="FacturasVentas" Type="Self.FacturasVentas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoFactura">
+        <PropertyRef Name="IDTIPOFACTURA" />
+      </Principal>
+      <Dependent Role="FacturasVentas">
+        <PropertyRef Name="IDTIPOFACTURA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturasVentas_Vendedor">
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="0..1" />
+    <End Role="FacturasVentas" Type="Self.FacturasVentas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendedor">
+        <PropertyRef Name="IDVENDEDOR" />
+      </Principal>
+      <Dependent Role="FacturasVentas">
+        <PropertyRef Name="IDVENDEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaProveedor_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="0..1" />
+    <End Role="ListaProveedor" Type="Self.ListaProveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IDARTICULO" />
+      </Principal>
+      <Dependent Role="ListaProveedor">
+        <PropertyRef Name="IDARTICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaProveedor_Proveedor">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="0..1" />
+    <End Role="ListaProveedor" Type="Self.ListaProveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IDPROVEEDOR" />
+      </Principal>
+      <Dependent Role="ListaProveedor">
+        <PropertyRef Name="IDPROVEEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaCredito_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="NotaCredito" Type="Self.NotaCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IDCLIENTE" />
+      </Principal>
+      <Dependent Role="NotaCredito">
+        <PropertyRef Name="IDCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaCredito_Detalle">
+    <End Role="Detalle" Type="Self.Detalle" Multiplicity="0..1" />
+    <End Role="NotaCredito" Type="Self.NotaCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Detalle">
+        <PropertyRef Name="IDDETALLE" />
+      </Principal>
+      <Dependent Role="NotaCredito">
+        <PropertyRef Name="IDDETALLE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaCredito_FormaPago">
+    <End Role="FormaPago" Type="Self.FormaPago" Multiplicity="0..1" />
+    <End Role="NotaCredito" Type="Self.NotaCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IDFORMAPAGO" />
+      </Principal>
+      <Dependent Role="NotaCredito">
+        <PropertyRef Name="IDFORMADEPAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaCredito_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+    <End Role="NotaCredito" Type="Self.NotaCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="IDPERSONAL" />
+      </Principal>
+      <Dependent Role="NotaCredito">
+        <PropertyRef Name="IDPERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaCredito_TipoNota">
+    <End Role="TipoNota" Type="Self.TipoNota" Multiplicity="0..1" />
+    <End Role="NotaCredito" Type="Self.NotaCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoNota">
+        <PropertyRef Name="IDTIPONOTA" />
+      </Principal>
+      <Dependent Role="NotaCredito">
+        <PropertyRef Name="IDTIPONOTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaCredito_Vendedor">
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="0..1" />
+    <End Role="NotaCredito" Type="Self.NotaCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendedor">
+        <PropertyRef Name="IDVENDEDOR" />
+      </Principal>
+      <Dependent Role="NotaCredito">
+        <PropertyRef Name="IDVENDEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaDebito_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="NotaDebito" Type="Self.NotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IDCLIENTE" />
+      </Principal>
+      <Dependent Role="NotaDebito">
+        <PropertyRef Name="IDCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaDebito_Detalle">
+    <End Role="Detalle" Type="Self.Detalle" Multiplicity="0..1" />
+    <End Role="NotaDebito" Type="Self.NotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Detalle">
+        <PropertyRef Name="IDDETALLE" />
+      </Principal>
+      <Dependent Role="NotaDebito">
+        <PropertyRef Name="IDDETALLE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaDebito_FormaPago">
+    <End Role="FormaPago" Type="Self.FormaPago" Multiplicity="0..1" />
+    <End Role="NotaDebito" Type="Self.NotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IDFORMAPAGO" />
+      </Principal>
+      <Dependent Role="NotaDebito">
+        <PropertyRef Name="IDFORMADEPAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaDebito_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+    <End Role="NotaDebito" Type="Self.NotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="IDPERSONAL" />
+      </Principal>
+      <Dependent Role="NotaDebito">
+        <PropertyRef Name="IDPERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaDebito_TipoNota">
+    <End Role="TipoNota" Type="Self.TipoNota" Multiplicity="0..1" />
+    <End Role="NotaDebito" Type="Self.NotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoNota">
+        <PropertyRef Name="IDTIPONOTA" />
+      </Principal>
+      <Dependent Role="NotaDebito">
+        <PropertyRef Name="IDTIPONOTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaDebito_Vendedor">
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="0..1" />
+    <End Role="NotaDebito" Type="Self.NotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendedor">
+        <PropertyRef Name="IDVENDEDOR" />
+      </Principal>
+      <Dependent Role="NotaDebito">
+        <PropertyRef Name="IDVENDEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaPedido_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="NotaPedido" Type="Self.NotaPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IDCLIENTE" />
+      </Principal>
+      <Dependent Role="NotaPedido">
+        <PropertyRef Name="IDCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotaPedido_Vendedor">
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="0..1" />
+    <End Role="NotaPedido" Type="Self.NotaPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendedor">
+        <PropertyRef Name="IDVENDEDOR" />
+      </Principal>
+      <Dependent Role="NotaPedido">
+        <PropertyRef Name="IDVENDEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermisoControl_PermisoModulo">
+    <End Role="PermisoModulo" Type="Self.PermisoModulo" Multiplicity="0..1" />
+    <End Role="PermisoControl" Type="Self.PermisoControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermisoModulo">
+        <PropertyRef Name="IdModulo" />
+      </Principal>
+      <Dependent Role="PermisoControl">
+        <PropertyRef Name="IdModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermisoUsuario_EstadoSistema">
+    <End Role="EstadoSistema" Type="Self.EstadoSistema" Multiplicity="0..1" />
+    <End Role="PermisoUsuario" Type="Self.PermisoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoSistema">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="PermisoUsuario">
+        <PropertyRef Name="IdEstadoSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermisoUsuario_PermisoControl">
+    <End Role="PermisoControl" Type="Self.PermisoControl" Multiplicity="0..1" />
+    <End Role="PermisoUsuario" Type="Self.PermisoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermisoControl">
+        <PropertyRef Name="IdControl" />
+      </Principal>
+      <Dependent Role="PermisoUsuario">
+        <PropertyRef Name="IdControl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermisoUsuario_PermisoModulo">
+    <End Role="PermisoModulo" Type="Self.PermisoModulo" Multiplicity="0..1" />
+    <End Role="PermisoUsuario" Type="Self.PermisoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermisoModulo">
+        <PropertyRef Name="IdModulo" />
+      </Principal>
+      <Dependent Role="PermisoUsuario">
+        <PropertyRef Name="IdModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermisoUsuario_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+    <End Role="PermisoUsuario" Type="Self.PermisoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="IDPERSONAL" />
+      </Principal>
+      <Dependent Role="PermisoUsuario">
+        <PropertyRef Name="IdPersonal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personal_EstadoCivil">
+    <End Role="EstadoCivil" Type="Self.EstadoCivil" Multiplicity="0..1" />
+    <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoCivil">
+        <PropertyRef Name="IDESTADOCIVIL" />
+      </Principal>
+      <Dependent Role="Personal">
+        <PropertyRef Name="IDESTADOCIVIL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personal_TipoPersonal">
+    <End Role="TipoPersonal" Type="Self.TipoPersonal" Multiplicity="0..1" />
+    <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPersonal">
+        <PropertyRef Name="IDTIPOPERSONAL" />
+      </Principal>
+      <Dependent Role="Personal">
+        <PropertyRef Name="IDTIPOPERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_Rubro">
+    <End Role="Rubro" Type="Self.Rubro" Multiplicity="0..1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rubro">
+        <PropertyRef Name="IDRUBRO" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="IDRUBRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_TipoIva">
+    <End Role="TipoIva" Type="Self.TipoIva" Multiplicity="0..1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIva">
+        <PropertyRef Name="IDTIPOIVA" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="IDTIPOIVA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recibos_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Recibos" Type="Self.Recibos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IDCLIENTE" />
+      </Principal>
+      <Dependent Role="Recibos">
+        <PropertyRef Name="IDCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recibos_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+    <End Role="Recibos" Type="Self.Recibos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="IDPERSONAL" />
+      </Principal>
+      <Dependent Role="Recibos">
+        <PropertyRef Name="IDPERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recibos_Vendedor">
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="0..1" />
+    <End Role="Recibos" Type="Self.Recibos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendedor">
+        <PropertyRef Name="IDVENDEDOR" />
+      </Principal>
+      <Dependent Role="Recibos">
+        <PropertyRef Name="IDVENDEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remito_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Remito" Type="Self.Remito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IDCLIENTE" />
+      </Principal>
+      <Dependent Role="Remito">
+        <PropertyRef Name="IDCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remito_FormaPago">
+    <End Role="FormaPago" Type="Self.FormaPago" Multiplicity="0..1" />
+    <End Role="Remito" Type="Self.Remito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IDFORMAPAGO" />
+      </Principal>
+      <Dependent Role="Remito">
+        <PropertyRef Name="IDFORMAPAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remito_NotaPedido">
+    <End Role="NotaPedido" Type="Self.NotaPedido" Multiplicity="0..1" />
+    <End Role="Remito" Type="Self.Remito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotaPedido">
+        <PropertyRef Name="IDNOTAPEDIDO" />
+      </Principal>
+      <Dependent Role="Remito">
+        <PropertyRef Name="IDNOTAPEDIDO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remito_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+    <End Role="Remito" Type="Self.Remito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="IDPERSONAL" />
+      </Principal>
+      <Dependent Role="Remito">
+        <PropertyRef Name="IDPERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remito_TipoRemito">
+    <End Role="TipoRemito" Type="Self.TipoRemito" Multiplicity="0..1" />
+    <End Role="Remito" Type="Self.Remito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoRemito">
+        <PropertyRef Name="IDTIPOREMITO" />
+      </Principal>
+      <Dependent Role="Remito">
+        <PropertyRef Name="IDTIPOREMITO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RetiroPlanta_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+    <End Role="RetiroPlanta" Type="Self.RetiroPlanta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="IDPERSONAL" />
+      </Principal>
+      <Dependent Role="RetiroPlanta">
+        <PropertyRef Name="IDPERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubtipoPago_TipoPago">
+    <End Role="TipoPago" Type="Self.TipoPago" Multiplicity="0..1" />
+    <End Role="SubtipoPago" Type="Self.SubtipoPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPago">
+        <PropertyRef Name="IDTIPOPAGO" />
+      </Principal>
+      <Dependent Role="SubtipoPago">
+        <PropertyRef Name="IDTIPOPAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Suceso_EstadoSistema">
+    <End Role="EstadoSistema" Type="Self.EstadoSistema" Multiplicity="1" />
+    <End Role="Suceso" Type="Self.Suceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoSistema">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Suceso">
+        <PropertyRef Name="IDESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoIva_Impuesto">
+    <End Role="Impuesto" Type="Self.Impuesto" Multiplicity="0..1" />
+    <End Role="TipoIva" Type="Self.TipoIva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Impuesto">
+        <PropertyRef Name="IDIMPUESTO" />
+      </Principal>
+      <Dependent Role="TipoIva">
+        <PropertyRef Name="IDIMPUESTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendedor_TipoPersonal">
+    <End Role="TipoPersonal" Type="Self.TipoPersonal" Multiplicity="0..1" />
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPersonal">
+        <PropertyRef Name="IDTIPOPERSONAL" />
+      </Principal>
+      <Dependent Role="Vendedor">
+        <PropertyRef Name="IDTIPOPERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="connStringDBModelStoreContainer">
+    <EntitySet Name="Articulo" EntityType="Self.Articulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticuloPrecioVenta" EntityType="Self.ArticuloPrecioVenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Componente" EntityType="Self.Componente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CtaCteCliente" EntityType="Self.CtaCteCliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Detalle" EntityType="Self.Detalle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleEntregaPlanta" EntityType="Self.DetalleEntregaPlanta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleFacturaCompras" EntityType="Self.DetalleFacturaCompras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleFacturaVentas" EntityType="Self.DetalleFacturaVentas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleNotaCredito" EntityType="Self.DetalleNotaCredito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleNotaDebito" EntityType="Self.DetalleNotaDebito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleNotaPedido" EntityType="Self.DetalleNotaPedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleRecibos" EntityType="Self.DetalleRecibos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleRemito" EntityType="Self.DetalleRemito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleRetiroPlanta" EntityType="Self.DetalleRetiroPlanta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpresaCentro" EntityType="Self.EmpresaCentro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntregaAPlanta" EntityType="Self.EntregaAPlanta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Especialidad" EntityType="Self.Especialidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstadoCivil" EntityType="Self.EstadoCivil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstadoSistema" EntityType="Self.EstadoSistema" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FacturasCompras" EntityType="Self.FacturasCompras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FacturasVentas" EntityType="Self.FacturasVentas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Familia" EntityType="Self.Familia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FormaPago" EntityType="Self.FormaPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdentificaComprob" EntityType="Self.IdentificaComprob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Impuesto" EntityType="Self.Impuesto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Liquidacion" EntityType="Self.Liquidacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListaPrecios" EntityType="Self.ListaPrecios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListaProveedor" EntityType="Self.ListaProveedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Marca" EntityType="Self.Marca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotaCredito" EntityType="Self.NotaCredito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotaDebito" EntityType="Self.NotaDebito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotaPedido" EntityType="Self.NotaPedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NumeradoresTablas" EntityType="Self.NumeradoresTablas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parametros" EntityType="Self.Parametros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParametrosReportes" EntityType="Self.ParametrosReportes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermisoControl" EntityType="Self.PermisoControl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermisoModulo" EntityType="Self.PermisoModulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermisoUsuario" EntityType="Self.PermisoUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proveedor" EntityType="Self.Proveedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Recibos" EntityType="Self.Recibos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Remito" EntityType="Self.Remito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RetiroPlanta" EntityType="Self.RetiroPlanta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rubro" EntityType="Self.Rubro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SoporteTecnico" EntityType="Self.SoporteTecnico" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubtipoPago" EntityType="Self.SubtipoPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Suceso" EntityType="Self.Suceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TesoreriaCaja" EntityType="Self.TesoreriaCaja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TesoreriaMovimiento" EntityType="Self.TesoreriaMovimiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TesoreriaTipoMovimiento" EntityType="Self.TesoreriaTipoMovimiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoArticulo" EntityType="Self.TipoArticulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoFactura" EntityType="Self.TipoFactura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoIva" EntityType="Self.TipoIva" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoNota" EntityType="Self.TipoNota" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoPago" EntityType="Self.TipoPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoPersonal" EntityType="Self.TipoPersonal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoProducto" EntityType="Self.TipoProducto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoRemito" EntityType="Self.TipoRemito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vendedor" EntityType="Self.Vendedor" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Articulo_EstadoSistema" Association="Self.FK_Articulo_EstadoSistema">
+      <End Role="EstadoSistema" EntitySet="EstadoSistema" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articulo_Familia" Association="Self.FK_Articulo_Familia">
+      <End Role="Familia" EntitySet="Familia" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articulo_Impuesto" Association="Self.FK_Articulo_Impuesto">
+      <End Role="Impuesto" EntitySet="Impuesto" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articulo_Marca" Association="Self.FK_Articulo_Marca">
+      <End Role="Marca" EntitySet="Marca" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articulo_Proveedor" Association="Self.FK_Articulo_Proveedor">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articulo_Rubro" Association="Self.FK_Articulo_Rubro">
+      <End Role="Rubro" EntitySet="Rubro" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articulo_TipoArticulo" Association="Self.FK_Articulo_TipoArticulo">
+      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articulo_TipoProducto" Association="Self.FK_Articulo_TipoProducto">
+      <End Role="TipoProducto" EntitySet="TipoProducto" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArticuloPrecioVenta_Articulo" Association="Self.FK_ArticuloPrecioVenta_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="ArticuloPrecioVenta" EntitySet="ArticuloPrecioVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArticuloPrecioVenta_ListaPrecios" Association="Self.FK_ArticuloPrecioVenta_ListaPrecios">
+      <End Role="ListaPrecios" EntitySet="ListaPrecios" />
+      <End Role="ArticuloPrecioVenta" EntitySet="ArticuloPrecioVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Especialidad" Association="Self.FK_Cliente_Especialidad">
+      <End Role="Especialidad" EntitySet="Especialidad" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_FormaPago" Association="Self.FK_Cliente_FormaPago">
+      <End Role="FormaPago" EntitySet="FormaPago" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_ListaPrecios" Association="Self.FK_Cliente_ListaPrecios">
+      <End Role="ListaPrecios" EntitySet="ListaPrecios" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Personal" Association="Self.FK_Cliente_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_TipoDeIva" Association="Self.FK_Cliente_TipoDeIva">
+      <End Role="TipoIva" EntitySet="TipoIva" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Componente_Articulo" Association="Self.FK_Componente_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="Componente" EntitySet="Componente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleEntregaPlanta_Articulo" Association="Self.FK_DetalleEntregaPlanta_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DetalleEntregaPlanta" EntitySet="DetalleEntregaPlanta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleFacturaCompras_Articulo" Association="Self.FK_DetalleFacturaCompras_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DetalleFacturaCompras" EntitySet="DetalleFacturaCompras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleFacturaCompras_FacturasCompras" Association="Self.FK_DetalleFacturaCompras_FacturasCompras">
+      <End Role="FacturasCompras" EntitySet="FacturasCompras" />
+      <End Role="DetalleFacturaCompras" EntitySet="DetalleFacturaCompras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleFacturaVentas_Articulo" Association="Self.FK_DetalleFacturaVentas_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DetalleFacturaVentas" EntitySet="DetalleFacturaVentas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleFacturaVentas_DetalleRemito" Association="Self.FK_DetalleFacturaVentas_DetalleRemito">
+      <End Role="DetalleRemito" EntitySet="DetalleRemito" />
+      <End Role="DetalleFacturaVentas" EntitySet="DetalleFacturaVentas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleFacturaVentas_FacturasVentas" Association="Self.FK_DetalleFacturaVentas_FacturasVentas">
+      <End Role="FacturasVentas" EntitySet="FacturasVentas" />
+      <End Role="DetalleFacturaVentas" EntitySet="DetalleFacturaVentas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleNotaCredito_NotaCredito" Association="Self.FK_DetalleNotaCredito_NotaCredito">
+      <End Role="NotaCredito" EntitySet="NotaCredito" />
+      <End Role="DetalleNotaCredito" EntitySet="DetalleNotaCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleNotaDebito_Articulo" Association="Self.FK_DetalleNotaDebito_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DetalleNotaDebito" EntitySet="DetalleNotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleNotaPedido_NotaPedido" Association="Self.FK_DetalleNotaPedido_NotaPedido">
+      <End Role="NotaPedido" EntitySet="NotaPedido" />
+      <End Role="DetalleNotaPedido" EntitySet="DetalleNotaPedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleRecibos_SubtipoPago" Association="Self.FK_DetalleRecibos_SubtipoPago">
+      <End Role="SubtipoPago" EntitySet="SubtipoPago" />
+      <End Role="DetalleRecibos" EntitySet="DetalleRecibos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleRecibos_TipoPago" Association="Self.FK_DetalleRecibos_TipoPago">
+      <End Role="TipoPago" EntitySet="TipoPago" />
+      <End Role="DetalleRecibos" EntitySet="DetalleRecibos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleRemito_Articulo" Association="Self.FK_DetalleRemito_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DetalleRemito" EntitySet="DetalleRemito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleRemito_DetalleNotaPedido" Association="Self.FK_DetalleRemito_DetalleNotaPedido">
+      <End Role="DetalleNotaPedido" EntitySet="DetalleNotaPedido" />
+      <End Role="DetalleRemito" EntitySet="DetalleRemito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleRemito_Remito" Association="Self.FK_DetalleRemito_Remito">
+      <End Role="Remito" EntitySet="Remito" />
+      <End Role="DetalleRemito" EntitySet="DetalleRemito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleRetiroPlanta_Articulo" Association="Self.FK_DetalleRetiroPlanta_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DetalleRetiroPlanta" EntitySet="DetalleRetiroPlanta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaCentro_Empresa" Association="Self.FK_EmpresaCentro_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaCentro" EntitySet="EmpresaCentro" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturasCompras_Personal" Association="Self.FK_FacturasCompras_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="FacturasCompras" EntitySet="FacturasCompras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturasCompras_Proveedor" Association="Self.FK_FacturasCompras_Proveedor">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="FacturasCompras" EntitySet="FacturasCompras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturasCompras_TipoFactura" Association="Self.FK_FacturasCompras_TipoFactura">
+      <End Role="TipoFactura" EntitySet="TipoFactura" />
+      <End Role="FacturasCompras" EntitySet="FacturasCompras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturasVentas_FormaPago" Association="Self.FK_FacturasVentas_FormaPago">
+      <End Role="FormaPago" EntitySet="FormaPago" />
+      <End Role="FacturasVentas" EntitySet="FacturasVentas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturasVentas_NotaCredito" Association="Self.FK_FacturasVentas_NotaCredito">
+      <End Role="NotaCredito" EntitySet="NotaCredito" />
+      <End Role="FacturasVentas" EntitySet="FacturasVentas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturasVentas_Personal" Association="Self.FK_FacturasVentas_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="FacturasVentas" EntitySet="FacturasVentas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturasVentas_TipoFactura" Association="Self.FK_FacturasVentas_TipoFactura">
+      <End Role="TipoFactura" EntitySet="TipoFactura" />
+      <End Role="FacturasVentas" EntitySet="FacturasVentas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturasVentas_Vendedor" Association="Self.FK_FacturasVentas_Vendedor">
+      <End Role="Vendedor" EntitySet="Vendedor" />
+      <End Role="FacturasVentas" EntitySet="FacturasVentas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaProveedor_Articulo" Association="Self.FK_ListaProveedor_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="ListaProveedor" EntitySet="ListaProveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaProveedor_Proveedor" Association="Self.FK_ListaProveedor_Proveedor">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="ListaProveedor" EntitySet="ListaProveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaCredito_Cliente" Association="Self.FK_NotaCredito_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="NotaCredito" EntitySet="NotaCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaCredito_Detalle" Association="Self.FK_NotaCredito_Detalle">
+      <End Role="Detalle" EntitySet="Detalle" />
+      <End Role="NotaCredito" EntitySet="NotaCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaCredito_FormaPago" Association="Self.FK_NotaCredito_FormaPago">
+      <End Role="FormaPago" EntitySet="FormaPago" />
+      <End Role="NotaCredito" EntitySet="NotaCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaCredito_Personal" Association="Self.FK_NotaCredito_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="NotaCredito" EntitySet="NotaCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaCredito_TipoNota" Association="Self.FK_NotaCredito_TipoNota">
+      <End Role="TipoNota" EntitySet="TipoNota" />
+      <End Role="NotaCredito" EntitySet="NotaCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaCredito_Vendedor" Association="Self.FK_NotaCredito_Vendedor">
+      <End Role="Vendedor" EntitySet="Vendedor" />
+      <End Role="NotaCredito" EntitySet="NotaCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaDebito_Cliente" Association="Self.FK_NotaDebito_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaDebito_Detalle" Association="Self.FK_NotaDebito_Detalle">
+      <End Role="Detalle" EntitySet="Detalle" />
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaDebito_FormaPago" Association="Self.FK_NotaDebito_FormaPago">
+      <End Role="FormaPago" EntitySet="FormaPago" />
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaDebito_Personal" Association="Self.FK_NotaDebito_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaDebito_TipoNota" Association="Self.FK_NotaDebito_TipoNota">
+      <End Role="TipoNota" EntitySet="TipoNota" />
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaDebito_Vendedor" Association="Self.FK_NotaDebito_Vendedor">
+      <End Role="Vendedor" EntitySet="Vendedor" />
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaPedido_Cliente" Association="Self.FK_NotaPedido_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="NotaPedido" EntitySet="NotaPedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotaPedido_Vendedor" Association="Self.FK_NotaPedido_Vendedor">
+      <End Role="Vendedor" EntitySet="Vendedor" />
+      <End Role="NotaPedido" EntitySet="NotaPedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermisoControl_PermisoModulo" Association="Self.FK_PermisoControl_PermisoModulo">
+      <End Role="PermisoModulo" EntitySet="PermisoModulo" />
+      <End Role="PermisoControl" EntitySet="PermisoControl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermisoUsuario_EstadoSistema" Association="Self.FK_PermisoUsuario_EstadoSistema">
+      <End Role="EstadoSistema" EntitySet="EstadoSistema" />
+      <End Role="PermisoUsuario" EntitySet="PermisoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermisoUsuario_PermisoControl" Association="Self.FK_PermisoUsuario_PermisoControl">
+      <End Role="PermisoControl" EntitySet="PermisoControl" />
+      <End Role="PermisoUsuario" EntitySet="PermisoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermisoUsuario_PermisoModulo" Association="Self.FK_PermisoUsuario_PermisoModulo">
+      <End Role="PermisoModulo" EntitySet="PermisoModulo" />
+      <End Role="PermisoUsuario" EntitySet="PermisoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermisoUsuario_Personal" Association="Self.FK_PermisoUsuario_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="PermisoUsuario" EntitySet="PermisoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personal_EstadoCivil" Association="Self.FK_Personal_EstadoCivil">
+      <End Role="EstadoCivil" EntitySet="EstadoCivil" />
+      <End Role="Personal" EntitySet="Personal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personal_TipoPersonal" Association="Self.FK_Personal_TipoPersonal">
+      <End Role="TipoPersonal" EntitySet="TipoPersonal" />
+      <End Role="Personal" EntitySet="Personal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_Rubro" Association="Self.FK_Proveedor_Rubro">
+      <End Role="Rubro" EntitySet="Rubro" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_TipoIva" Association="Self.FK_Proveedor_TipoIva">
+      <End Role="TipoIva" EntitySet="TipoIva" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recibos_Cliente" Association="Self.FK_Recibos_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Recibos" EntitySet="Recibos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recibos_Personal" Association="Self.FK_Recibos_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="Recibos" EntitySet="Recibos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recibos_Vendedor" Association="Self.FK_Recibos_Vendedor">
+      <End Role="Vendedor" EntitySet="Vendedor" />
+      <End Role="Recibos" EntitySet="Recibos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remito_Cliente" Association="Self.FK_Remito_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Remito" EntitySet="Remito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remito_FormaPago" Association="Self.FK_Remito_FormaPago">
+      <End Role="FormaPago" EntitySet="FormaPago" />
+      <End Role="Remito" EntitySet="Remito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remito_NotaPedido" Association="Self.FK_Remito_NotaPedido">
+      <End Role="NotaPedido" EntitySet="NotaPedido" />
+      <End Role="Remito" EntitySet="Remito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remito_Personal" Association="Self.FK_Remito_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="Remito" EntitySet="Remito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remito_TipoRemito" Association="Self.FK_Remito_TipoRemito">
+      <End Role="TipoRemito" EntitySet="TipoRemito" />
+      <End Role="Remito" EntitySet="Remito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RetiroPlanta_Personal" Association="Self.FK_RetiroPlanta_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="RetiroPlanta" EntitySet="RetiroPlanta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubtipoPago_TipoPago" Association="Self.FK_SubtipoPago_TipoPago">
+      <End Role="TipoPago" EntitySet="TipoPago" />
+      <End Role="SubtipoPago" EntitySet="SubtipoPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Suceso_EstadoSistema" Association="Self.FK_Suceso_EstadoSistema">
+      <End Role="EstadoSistema" EntitySet="EstadoSistema" />
+      <End Role="Suceso" EntitySet="Suceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoIva_Impuesto" Association="Self.FK_TipoIva_Impuesto">
+      <End Role="Impuesto" EntitySet="Impuesto" />
+      <End Role="TipoIva" EntitySet="TipoIva" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendedor_TipoPersonal" Association="Self.FK_Vendedor_TipoPersonal">
+      <End Role="TipoPersonal" EntitySet="TipoPersonal" />
+      <End Role="Vendedor" EntitySet="Vendedor" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

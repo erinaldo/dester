@@ -210,6 +210,7 @@
             this.StatusBar.Name = "StatusBar";
             this.StatusBar.Size = new System.Drawing.Size(1004, 22);
             this.StatusBar.TabIndex = 0;
+            this.StatusBar.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.StatusBar_ItemClicked);
             // 
             // StatusUserNameLogIn
             // 
@@ -227,6 +228,7 @@
             this.tsUsuarioEnLinea.Name = "tsUsuarioEnLinea";
             this.tsUsuarioEnLinea.Size = new System.Drawing.Size(32, 20);
             this.tsUsuarioEnLinea.Text = "Usuarios En Linea";
+            this.tsUsuarioEnLinea.ButtonClick += new System.EventHandler(this.tsUsuarioEnLinea_ButtonClick);
             // 
             // toolStripStatusLabel8
             // 
@@ -368,11 +370,11 @@
             // toolStripStatusLabel12
             // 
             this.toolStripStatusLabel12.ActiveLinkColor = System.Drawing.SystemColors.Highlight;
+            this.toolStripStatusLabel12.Enabled = false;
             this.toolStripStatusLabel12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel12.ForeColor = System.Drawing.Color.Red;
             this.toolStripStatusLabel12.Name = "toolStripStatusLabel12";
-            this.toolStripStatusLabel12.Size = new System.Drawing.Size(35, 17);
-            this.toolStripStatusLabel12.Text = "$980";
+            this.toolStripStatusLabel12.Size = new System.Drawing.Size(0, 17);
             this.toolStripStatusLabel12.Click += new System.EventHandler(this.toolStripStatusLabel12_Click);
             // 
             // toolStripStatusLabel16
